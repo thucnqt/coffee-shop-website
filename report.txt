@@ -1,1 +1,23 @@
-
+Mô tả công việc thực:
+  1. Xây dựng một giao diện web coffee tương tự như: https://www.portotheme.com/wordpress/porto/coffee/.
+  Lưu ý: Dùng phiên bản bootstrap mới nhất (v4.4.1) https://www.bootstrapcdn.com/ 
+    Mỗi phần trình bày cần chú thích, Format code phù hợp (xuống dòng, thụt ra thụt vô ...). Đặt tên id, class phù hợp với nội dung đoạn code. 
+    Ví dụ: 
+      <header>
+        <!-- Đây là phần slide bar -->
+          <div id="slidebar"> ...
+            <div ....
+              <div ....
+              ......
+        <!-- Kết thúc slide bar -->
+      </header>
+     
+  Phân công:
+    1. Thức: Làm phần 1 + 2 (Bao gồm slide và menu bar)
+    2. A Hiếu Hiếu: Làm phần 3 + 4 (Bao gồm About + Reservations)
+    3. A Hưng: Làm phần 5 + 6 + 7 (Bao gồm Menu, Photo, News)
+    4. A Hiếu Nguyễn: Làm 2 phần cuối (Bao gồm Location và footer)
+  Thời gian dự kiến hoàn thành xong nội dung: Trưa thứ 3 (25/02/2020) (12.PM) và sau đó sẽ tổng hợp code thành một Source hoàn chỉnh. 
+  
+ 
+  2. Từ source code (html css javascript) ở phần 1 viết một chương trình bằng ngôn ngữ Python cho phép genarate thay đổi các nội dung trên website theo ý người dùng. (Sư dụng hướng đối tượng).
