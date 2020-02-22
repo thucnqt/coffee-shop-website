@@ -1,0 +1,222 @@
+/* whole page */
+
+body {
+    /* loại bỏ viền trắng quanh trang web */
+    margin: 0;
+}
+
+img {
+    /* giới hạn kích cỡ img trong div */
+    max-width: 100%;
+}
+
+.circle {
+    /* tạo hình tròn */
+    border-radius: 50%;
+}
+
+/* thiết lập font chữ */
+
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/Oswald-DemiBold.ttf);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Regular.otf);
+
+}
+
+
+/* banner */
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 686px;
+    background: #1eb29a;
+}
+
+/* header */
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 122px;
+    background: #212529;
+}
+
+/* about */
+
+#about {
+    position: relative;
+    width: 100%;
+    height: 476px;
+    background: white;
+}
+
+/* reservations */
+
+#reservations {
+    position: relative;
+    width: 100%;
+    height: 472px;
+    background: #1c790d;
+}
+
+/* menu */
+
+#menu {
+    position: relative;
+    width: 100%;
+    height: 1033px;
+    background: white;
+}
+
+/* photos */
+
+#photos {
+    position: relative;
+    width: 100%;
+    height: 211px;
+    background: #f9fb10;
+}
+
+/* news */
+
+#news {
+    position: relative;
+    width: 100%;
+    height: 875px;
+    background: white;
+}
+
+/* ---------- phần của anh Hiếu ---------- */
+
+/* locations */
+
+#locations {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* background: #1c790d; */
+}
+
+/* footer */
+
+#footer {
+    position: relative;
+    width: 100%;
+    /* min-height: 490px; */
+    background: #1d2127;
+    padding-top: 96px;
+}
+
+#footer p {
+    /* loại bỏ viền quanh p */
+    margin: 0;
+}
+
+/* footer logo */
+
+#footer-image {
+    position: relative;
+    width: 195px;
+    height: 132px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 64px;
+}
+
+/* khung địa chỉ, thông in liên lạc */
+
+#footer-info {
+    position: relative;
+    max-width: 1110px;
+    min-height: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* margin-bottom: 15%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* từng cột trong khung */
+
+.footer-address {
+    display: inline-block;
+    min-width: 200px;
+    max-width: 210px;
+    max-height: 20px;
+    padding: 0 5%;
+    max-height: 100%;
+    text-align: center;
+}
+
+.address-city {
+    font-family: Oswald;
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.address-phone {
+    font-family: Poppins;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+
+/* biểu tượng share (facebook, twitter, linkedin...) */
+
+.address-share {
+    padding-top: 5px;
+}
+
+.share {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    /* đặt trên 1 dòng */
+    display: inline-block;
+    /* không hiện hình tròn khi không trỏ chuột */
+    background: transparent;
+    transition: .3s;
+}
+
+/* hiện hình tròn khi trỏ chuột */
+.fb:hover {background: #3b5998;}
+.tw:hover {background: #00acee;}
+.in:hover {background: #0e76a8;}
+
+/* biểu tượng facebook, twitter, linkedin... */
+.share svg {
+    position: absolute;
+    top: 7px;
+    left: 30%;
+}
+
+/* footer copyright */
+
+#footer-copyright {
+    position: relative;
+    max-width: 100%;
+    height: 76px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+p.copyright {
+    font-family: Poppins;
+    font-size: 12px;
+    color: gray;
+    position: absolute;
+    min-width: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}

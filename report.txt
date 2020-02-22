@@ -16,7 +16,9 @@ Mô tả công việc thực:
     1. Thức: Làm phần 1 + 2 (Bao gồm slide và menu bar)
     2. A Hiếu Hiếu: Làm phần 3 + 4 (Bao gồm About + Reservations)
     3. A Hưng: Làm phần 5 + 6 + 7 (Bao gồm Menu, Photo, News)
-    4. A Hiếu Nguyễn: Làm 2 phần cuối (Bao gồm Location và footer)
+    4. A Hiếu Nguyễn: Làm 2 phần cuối (Bao gồm Location và footer) --------- Hoàn Thành 
+    A Hiếu tiếp tục làm Page New . Mọi người làm xong cùng hỗ trợ a Hiếu nhé !
+
   Thời gian dự kiến hoàn thành xong nội dung: Trưa thứ 3 (25/02/2020) (12.PM) và sau đó sẽ tổng hợp code thành một Source hoàn chỉnh. 
   
  
