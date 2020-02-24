@@ -6,11 +6,16 @@
 <head>
     <!-- require meta tags -->
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+=======
+    <title>Coffee Shop</title>
+    <script src="jQuery/jquery-3.4.1.js"></script>
+>>>>>>> upstream/master
     <!-- iconify là javascript dùng để tạo biểu tượng facebook, twitter, linkedin... -->
     <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
 
@@ -239,7 +244,56 @@
             <!-- end of photos -->
 
             <!-- start of news -->
-            <div id="news">news</div>
+            <div id="news">
+                <div class="custom-heading">
+                    <h2><p class="on-scroll go-up">News & Events</p></h2>
+                    <div class="on-scroll draw-line separator-line"></div>
+                    <p class="on-scroll go-up">orem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim.</p>
+                </div>
+                <div class="news-content flex-center">
+
+                    <!-- ô tin tức 1 -->
+                    <div class="news-item flex-center-in">
+                        <a href="/"><h4 style="margin-bottom: 10px;">Amazing Things Are Coming</h4></a>
+                        <p style="font-family: Poppins;font-size: 13px;color: #212529;font-weight: bold;margin-bottom: 10px;">
+                            <span class="iconify" data-icon="feather:clock" data-inline="false" style="color: #ab8b65;transform: translateY(2px);"></span> May 16, 2019
+                        </p>
+                        <p style="font-family: Poppins;font-size: 13px;color: gray;margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris....</p>
+                        <p style="font-family: Poppins;font-size: 13px;font-weight: bold;">
+                            <img src="img/userpic.jpg" style="max-width: 25px;border-radius: 50%;transform: translateY(10px);margin-right: 5px;">
+                            <span style="color: #212529;">by <a style="color: #ab8b65;" href="/">Joe</a></span>
+                        </p>
+                    </div>
+
+                    <!-- ô tin tức 2 -->
+                    <div class="news-item flex-center-in">
+                        <a href="/"><h4 style="margin-bottom: 10px;">Creative Business</h4></a>
+                        <p style="font-family: Poppins;font-size: 13px;color: #212529;font-weight: bold;margin-bottom: 10px;">
+                            <span class="iconify" data-icon="feather:clock" data-inline="false" style="color: #ab8b65;transform: translateY(2px);"></span> May 16, 2019
+                        </p>
+                        <p style="font-family: Poppins;font-size: 13px;color: gray;margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris....</p>
+                        <p style="font-family: Poppins;font-size: 13px;font-weight: bold;">
+                            <img src="img/userpic.jpg" style="max-width: 25px;border-radius: 50%;transform: translateY(10px);margin-right: 5px;">
+                            <span style="color: #212529;">by <a style="color: #ab8b65;" href="/">Joe</a></span>
+                        </p>
+                    </div>
+
+                    <!-- ô tin tức 3 -->
+                    <div class="news-item flex-center-in">
+                        <a href="/"><h4 style="margin-bottom: 10px;">Night Life</h4></a>
+                        <p style="font-family: Poppins;font-size: 13px;color: #212529;font-weight: bold;margin-bottom: 10px;">
+                            <span class="iconify" data-icon="feather:clock" data-inline="false" style="color: #ab8b65;transform: translateY(2px);"></span> May 16, 2019
+                        </p>
+                        <p style="font-family: Poppins;font-size: 13px;color: gray;margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris....</p>
+                        <p style="font-family: Poppins;font-size: 13px;font-weight: bold;">
+                            <img src="img/userpic.jpg" style="max-width: 25px;border-radius: 50%;transform: translateY(10px);margin-right: 5px;">
+                            <span style="color: #212529;">by <a style="color: #ab8b65;" href="/">Joe</a></span>
+                        </p>
+                    </div>
+
+                </div>
+                <a href="news/index.html" class="button" style="left: 50%;transform: translateX(-50%);"><p>view more</p></a>
+            </div>
             <!-- end of news -->
 
             <!-- start of locations -->
@@ -260,10 +314,10 @@
             <div id="footer-image"><img src="img/logo-light.png"></div>
 
             <!-- start of footer-info -->
-            <div id="footer-info">
+            <div id="footer-info" class="flex-center">
                 <!-- mỗi class footer-address là một cột trong khung footer-info -->
                 <!-- cột 1 -->
-                <div class="footer-address">
+                <div class="footer-address flex-center-in">
                     <p class="address-city">New York</p>
                     <p class="address-phone" style="color: gray;">123, New York Street, New York <a
                             style="color: white;">(123) 456-7890</a></p>
@@ -277,7 +331,7 @@
                     </p>
                 </div>
                 <!-- cột 2 -->
-                <div class="footer-address">
+                <div class="footer-address flex-center-in">
                     <p class="address-city">Fresno</p>
                     <p class="address-phone" style="color: gray;">123, Fresno Street, Fresno <a
                             style="color: white;">(123) 456-7890</a></p>
@@ -291,7 +345,7 @@
                     </p>
                 </div>
                 <!-- cột 3 -->
-                <div class="footer-address">
+                <div class="footer-address flex-center-in">
                     <p class="address-city">Birmingham</p>
                     <p class="address-phone" style="color: gray;">123, Birmingham Street, Birmingham <a
                             style="color: white;">(123) 456-7890</a></p>
@@ -321,5 +375,9 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 </body>
+<<<<<<< HEAD
 
+=======
+<script src="js/script.js"></script>
+>>>>>>> upstream/master
 </html>
