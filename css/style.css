@@ -6,76 +6,81 @@ cái nào có thể tái sử dụng cho phần của ae thì chỉ cần đặt
 /* các font chữ */
 
 @font-face {
-    font-family: Oswald;
-    src: url(../fonts/Oswald-Regular.ttf);
+  font-family: Oswald;
+  src: url(../fonts/Oswald-Regular.ttf);
 }
 
 @font-face {
-    font-family: Oswald-Bold;
-    src: url(../fonts/Oswald-DemiBold.ttf);
+  font-family: Oswald-Bold;
+  src: url(../fonts/Oswald-DemiBold.ttf);
 }
 
 @font-face {
-    font-family: Poppins;
-    src: url(../fonts/Poppins-Regular.otf);
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Regular.otf);
 }
 
 @font-face {
-    font-family: Poppins-Bold;
-    src: url(../fonts/Poppins-Bold.otf);
+  font-family: Poppins-Bold;
+  src: url(../fonts/Poppins-Bold.otf);
 }
 
 /* hết font chữ */
 
 body {
-    /* loại bỏ viền xung quanh */
-    margin: 0;
+  /* loại bỏ viền xung quanh */
+  margin: 0;
 }
 
 img {
-    /* giới hạn kích cỡ img trong div */
-    max-width: 100%;
+  /* giới hạn kích cỡ img trong div */
+  max-width: 100%;
 }
 
 /* nếu ae dùng thêm heading mới (vd: h1), thêm kèm dấu phẩy (vd: p,h1,h2,h4)
 cái này để loại bỏ mép ngoài */
-p,h2,h4 {
-    margin: 0;
+p,
+h2,
+h4 {
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .circle {
-    /* tạo hình tròn */
-    border-radius: 50%;
+  /* tạo hình tròn */
+  border-radius: 50%;
 }
 
 /* các nút bấm cuối từng phần, vd: view more
 class="button" */
 
 .button {
-    position: relative;
-    display: inline-block;
-    height: 20px;
-    padding: 16px 38px;
-    border: 4px solid #ab8b65;
-    border-radius: 4px;
-    font-family: Poppins-Bold;
-    font-size: 13px;
-    color: #ab8b65;
-    text-transform: uppercase;
-    transition: .3s;
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  padding: 16px 38px;
+  border: 4px solid #ab8b65;
+  border-radius: 4px;
+  font-family: Poppins-Bold;
+  font-size: 13px;
+  color: #ab8b65;
+  text-transform: uppercase;
+  transition: 0.3s;
 }
 
-.button:hover {color: white;background: #ab8b65;}
+.button:hover {
+  color: white;
+  background: #ab8b65;
+}
 
 .button p {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
 }
 
 /* flex tạo bố cục canh giữa toàn bộ, bố trí giống như dạng bảng
@@ -83,16 +88,16 @@ div lớn bên ngoài class="flex-center", chứa các div con class="flex-cente
 kích thước của từng div được quy định riêng */
 
 .flex-center {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .flex-center-in {
-    display: inline-block;
+  display: inline-block;
 }
 
 /* tạo animation khi thanh cuộn kéo tới, sử dụng javascript
@@ -101,61 +106,72 @@ mọi animation mới ae tạo trong phần này nha
 cách tạo: .animation.tên-animation {} và @keyframes tên-animation {} */
 
 .on-scroll {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .animation.go-up {
-    animation: go-up 2s 1;
+  animation: go-up 2s 1;
 }
 
 @keyframes go-up {
-    from {opacity: 0;transform: translateY(100%);}
-    to {opacity: 1;}
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .animation.draw-line {
-    animation: draw-line 2s 1;
+  animation: draw-line 2s 1;
 }
 
 @keyframes draw-line {
-    0% {width: 0;}
-    50% {width: 0;}
-    100% {width: 135px;}
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 135px;
+  }
 }
 
 /* heading của từng phần */
 
 .custom-heading {
-    max-width: 540px;
-    min-height: 100px;
-    font-family: Poppins;
-    font-size: 16px;
-    color: gray;
-    position: relative;
-    margin-bottom: 55px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+  max-width: 540px;
+  min-height: 100px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: gray;
+  position: relative;
+  margin-bottom: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
 h2 {
-    font-family: Oswald-Bold;
-    font-size: 35px;
-    color: #212529;
+  font-family: Oswald-Bold;
+  font-size: 35px;
+  color: #212529;
 }
 
 h4 {
-    font-family: Oswald;
-    font-size: 24px;
-    color: #212529;
+  font-family: Oswald;
+  font-size: 24px;
+  color: #212529;
 }
 
 .separator-line {
-    width: 135px;
-    height: 4px;
-    background: #ab8b65;
-    display: inline-block;
-    margin: 16px 0 22px 0;
+  width: 135px;
+  height: 4px;
+  background: #ab8b65;
+  display: inline-block;
+  margin: 16px 0 22px 0;
 }
 
 /* ----- hết toàn trang ----- */
@@ -163,55 +179,100 @@ h4 {
 /* banner */
 
 #banner {
-    position: relative;
-    width: 100%;
-    height: 686px;
-    background: #1eb29a;
+  position: relative;
+  width: 100%;
+  height: 686px;
+  background: #1eb29a;
 }
 
 /* header */
 
 #header {
-    position: relative;
-    width: 100%;
-    height: 122px;
-    background: #212529;
+  position: relative;
+  width: 100%;
+  height: 122px;
+  background: #212529;
 }
 
 /* about */
 
 #about {
-    position: relative;
-    width: 100%;
-    height: 476px;
-    background: white;
+  position: relative;
+  width: 100%;
+  height: 476px;
+  background: white;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.col-container {
+  display: flex;
+  width: 100%;
+}
+.col {
+  padding: 16px;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
 }
 
 /* reservations */
 
 #reservations {
-    position: relative;
-    width: 100%;
-    height: 472px;
-    background: #1c790d;
+  position: relative;
+  width: 100%;
+  height: 472px;
+  background: #1c790d;
 }
 
 /* menu */
 
 #menu {
-    position: relative;
-    width: 100%;
-    height: 1033px;
-    background: white;
+  position: relative;
+  width: 100%;
+  height: 1033px;
+  background: white;
 }
 
 /* photos */
 
 #photos {
-    position: relative;
-    width: 100%;
-    height: 211px;
-    background: #f9fb10;
+  position: relative;
+  width: 100%;
+  height: 211px;
+  background: #f9fb10;
 }
 
 /* ---------- phần của anh Hiếu ---------- */
@@ -219,130 +280,136 @@ h4 {
 /* news */
 
 #news {
-    position: relative;
-    width: 100%;
-    min-height: 168px;
-    margin: 110px 0;
-    background: white;
+  position: relative;
+  width: 100%;
+  min-height: 168px;
+  margin: 110px 0;
+  background: white;
 }
 
 .news-content {
-    max-width: 1140px;
-    min-height: 316px;
-    margin-bottom: 50px;
+  max-width: 1140px;
+  min-height: 316px;
+  margin-bottom: 50px;
 }
 
 .news-item {
-    width: 254px;
-    background: #F6F3EF;
-    padding: 40px;
-    margin: 15px;
-    line-height: 25px;
+  width: 254px;
+  background: #f6f3ef;
+  padding: 40px;
+  margin: 15px;
+  line-height: 25px;
 }
 
 /* locations */
 
 #locations {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    /* background: #1c790d; */
+  position: relative;
+  width: 100%;
+  height: 600px;
+  /* background: #1c790d; */
 }
 
 /* footer */
 
 #footer {
-    position: relative;
-    width: 100%;
-    /* min-height: 490px; */
-    background: #1d2127;
-    padding-top: 96px;
+  position: relative;
+  width: 100%;
+  /* min-height: 490px; */
+  background: #1d2127;
+  padding-top: 96px;
 }
 
 /* footer logo */
 
 #footer-image {
-    position: relative;
-    width: 195px;
-    height: 132px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 64px;
+  position: relative;
+  width: 195px;
+  height: 132px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 64px;
 }
 
 /* khung địa chỉ, thông in liên lạc */
 
 #footer-info {
-    max-width: 90%;
-    min-height: 150px;
+  max-width: 90%;
+  min-height: 150px;
 }
 
 /* từng cột trong khung */
 
 .footer-address {
-    max-width: 210px;
-    padding: 0 80px;
-    text-align: center;
+  max-width: 210px;
+  padding: 0 80px;
+  text-align: center;
 }
 
 .address-city {
-    font-family: Oswald-Bold;
-    color: white;
-    font-size: 22px;
-    text-transform: uppercase;
+  font-family: Oswald-Bold;
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
 }
 
 .address-phone {
-    font-family: Poppins;
-    font-size: 13px;
-    overflow: hidden;
+  font-family: Poppins;
+  font-size: 13px;
+  overflow: hidden;
 }
 
 /* biểu tượng share (facebook, twitter, linkedin...) */
 
 .address-share {
-    padding-top: 5px;
+  padding-top: 5px;
 }
 
 .share {
-    width: 30px;
-    height: 30px;
-    position: relative;
-    /* đặt trên 1 dòng */
-    display: inline-block;
-    /* không hiện hình tròn khi không trỏ chuột */
-    background: transparent;
-    transition: .3s;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  /* đặt trên 1 dòng */
+  display: inline-block;
+  /* không hiện hình tròn khi không trỏ chuột */
+  background: transparent;
+  transition: 0.3s;
 }
 
 /* hiện hình tròn khi trỏ chuột */
-.fb:hover {background: #3b5998;}
-.tw:hover {background: #00acee;}
-.in:hover {background: #0e76a8;}
+.fb:hover {
+  background: #3b5998;
+}
+.tw:hover {
+  background: #00acee;
+}
+.in:hover {
+  background: #0e76a8;
+}
 
 /* biểu tượng facebook, twitter, linkedin... */
 .share svg {
-    position: absolute;
-    top: 7px;
-    left: 30%;
+  position: absolute;
+  top: 7px;
+  left: 30%;
 }
 
 /* footer copyright */
 
 #footer-copyright {
-    position: relative;
-    max-width: 100%;
-    height: 76px;
+  position: relative;
+  max-width: 100%;
+  height: 76px;
 }
 
 p.copyright {
-    font-family: Poppins;
-    font-size: 12px;
-    color: gray;
-    position: relative;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
+  font-family: Poppins;
+  font-size: 12px;
+  color: gray;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* ---------- hết phần của anh Hiếu ---------- */
