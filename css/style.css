@@ -435,3 +435,35 @@ p.copyright {
 }
 
 /* ---------- hết phần của anh Hiếu ---------- */
+
+
+/* CSS của Thức */
+
+.container-fluid{
+  padding: 0;
+
+}
+.full-screen{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+#menu-bar{
+  color: #777777;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  min-height: 122px;
+  background: #212529;
+}
+.navbar-light{
+  background: none !important;
+}
+.nav-link{
+  color: #777777 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  display: flex; 
+  justify-content: center;
+}
+/* Kết thúc CSS của Thức */
