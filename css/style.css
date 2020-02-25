@@ -209,13 +209,13 @@ h4 {
 /* ------------- phần của Hưng---------- */
 /* menu */
 
-#menu {
+/* #menu {
     position: relative;
     width: 100%;
     height: 1033px;
     background: white;
     padding: 110px 0px;
-}
+} */
 .sub-menu{
     max-width: 540px;
     min-height: 64px;
