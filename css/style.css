@@ -100,6 +100,9 @@ kích thước của từng div được quy định riêng */
   display: inline-block;
 }
 
+.text-center{
+  text-align: center !important;
+}
 /* tạo animation khi thanh cuộn kéo tới, sử dụng javascript
 ví dụ: muốn dùng animation "go-up", đặt class="on-scroll go-up"
 mọi animation mới ae tạo trong phần này nha
@@ -154,6 +157,16 @@ cách tạo: .animation.tên-animation {} và @keyframes tên-animation {} */
   text-align: center;
 }
 
+.custom-about {
+  max-width: 540px;
+  min-height: 100px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: gray;
+  position: relative;
+  margin-bottom: 55px;
+}
+
 h2 {
   font-family: Oswald-Bold;
   font-size: 35px;
@@ -174,6 +187,57 @@ h4 {
   margin: 16px 0 22px 0;
 }
 
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.col-container {
+  display: flex;
+  width: 100%;
+}
+
+.col {
+  padding: auto;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
 /* ----- hết toàn trang ----- */
 
 /* banner */
@@ -199,62 +263,20 @@ h4 {
 #about {
   position: relative;
   width: 100%;
-  height: 476px;
+  padding: 110px 0 !important;
   background: white;
-}
-
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-.container-fluid {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.col-container {
-  display: flex;
-  width: 100%;
-}
-.col {
-  padding: 16px;
-  -ms-flex: 0 0 50%;
-  flex: 0 0 50%;
-  max-width: 50%;
 }
 
 /* reservations */
 
 #reservations {
   position: relative;
-  width: 100%;
-  height: 472px;
-  background: #1c790d;
+  width: 100%;  
+  height: 252px;
+  padding: 110px 0;
+  background-image: url(../img/coffee-background-1.jpg);
+  background-position: bottom;
+  background-size: 160%;
 }
 
 /* menu */
