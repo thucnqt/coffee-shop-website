@@ -123,10 +123,10 @@ cách tạo: .animation.tên-animation {} và @keyframes tên-animation {} */
 }
 
 @keyframes text1-up {
-    0% {transform: translateY(100%);opacity: 0;}
+    0% {transform: translateY(20%);opacity: 0;}
     10% {transform: none;opacity: 1;}
     90% {transform: none;opacity: 1;}
-    100% {transform: translateY(50%);opacity: 0;}
+    100% {transform: translateY(20%);opacity: 0;}
 }
 
 .animation.text2-up {
@@ -134,11 +134,11 @@ cách tạo: .animation.tên-animation {} và @keyframes tên-animation {} */
 }
 
 @keyframes text2-up {
-    0% {transform: translateY(100%); opacity: 0;}
-    10% {transform: translateY(100%); opacity: 0;}
+    0% {transform: translateY(10%); opacity: 0;}
+    10% {transform: translateY(10%); opacity: 0;}
     20% {transform: none;opacity: 1;}
     90% {transform: none;opacity: 1;}
-    100% {transform: translateY(50%);opacity: 0;}
+    100% {transform: translateY(10%);opacity: 0;}
 }
 
 .animation.text3 {
@@ -160,7 +160,7 @@ cách tạo: .animation.tên-animation {} và @keyframes tên-animation {} */
     20% {transform: translateY(100%); opacity: 0;}
     30% {transform: none;opacity: 1;}
     90% {transform: none;opacity: 1;}
-    100% {transform: translateY(50%);opacity: 0;}
+    100% {transform: none;opacity: 0;}
 }
 
 @keyframes arrow-fade-in {
