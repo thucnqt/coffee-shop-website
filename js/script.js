@@ -1,3 +1,46 @@
+// hàm slideshow
+var myIndex = 0;
+function slideshow() {
+    var txt = ["The amazing flavors will blow your mind.","Since 2001 with you."][myIndex];
+    var c = 0;
+    document.getElementById("typing").innerHTML = ""
+    function typeWriter() {
+        if (c < txt.length) {
+            document.getElementById("typing").innerHTML += txt.charAt(c);
+            c++;
+            setTimeout(typeWriter, 2000/txt.length);
+        }
+    };
+    typeWriter();
+    var i;
+    var x = document.getElementsByClassName("banner-img");
+    var t1 = document.getElementsByClassName("line1");
+    var t2 = document.getElementsByClassName("line2");
+    var t4 = document.getElementsByClassName("line4");
+        for (i = 0; i < x.length; i++) {
+      x[i].classList.remove("fading");
+      t1[0].classList.remove("animation");
+      t1[0].innerHTML = "";
+      t2[0].classList.remove("animation");
+      t2[0].innerHTML = "";
+      t4[0].classList.remove("animation");
+    };
+    t1[0].innerHTML = ["welcome, enjoy the original","outstanding coffee"][myIndex];
+    t1[0].classList.add("animation");
+    t2[0].innerHTML = ["fresh porto coffee","expresso bar"][myIndex];
+    t2[0].classList.add("animation");
+    t4[0].classList.add("animation");
+    x[myIndex].classList.add("fading");
+    x[myIndex].style.zIndex = "1";
+    if (myIndex > x.length - 2) {myIndex = -1};
+    x[myIndex+1].style.zIndex = "0"
+    myIndex++;
+    setTimeout(slideshow, 10000);
+    setTimeout(typeWriter, 8000)
+};
+slideshow();
+
+// $("#typing").hide().show("slide", { direction: "left" }, 5000);
 // hàm hiển thị vật thể khi kéo tới
 
 function AnimationOnScroll() {

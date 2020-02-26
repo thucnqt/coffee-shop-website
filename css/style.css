@@ -104,6 +104,65 @@ cách tạo: .animation.tên-animation {} và @keyframes tên-animation {} */
     visibility: hidden;
 }
 
+.animation {
+    visibility: visible;
+}
+
+.animation.fading {
+    animation: fading 10s infinite;
+}
+
+@keyframes fading {
+    0% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.animation.text1-up {
+    animation: text1-up 10s infinite;
+}
+
+@keyframes text1-up {
+    0% {transform: translateY(100%);opacity: 0;}
+    10% {transform: none;opacity: 1;}
+    90% {transform: none;opacity: 1;}
+    100% {transform: translateY(50%);opacity: 0;}
+}
+
+.animation.text2-up {
+    animation: text2-up 10s infinite;
+}
+
+@keyframes text2-up {
+    0% {transform: translateY(100%); opacity: 0;}
+    10% {transform: translateY(100%); opacity: 0;}
+    20% {transform: none;opacity: 1;}
+    90% {transform: none;opacity: 1;}
+    100% {transform: translateY(50%);opacity: 0;}
+}
+
+.animation.text3 {
+    animation: text3 10s infinite;
+}
+
+@keyframes text3 {
+    0% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.animation.text4-up {
+    animation: text4-up 10s infinite;
+}
+
+@keyframes text4-up {
+    0% {transform: translateY(100%); opacity: 0;}
+    20% {transform: translateY(100%); opacity: 0;}
+    30% {transform: none;opacity: 1;}
+    90% {transform: none;opacity: 1;}
+    100% {transform: translateY(50%);opacity: 0;}
+}
+
 .animation.go-up {
     animation: go-up 2s 1;
 }
@@ -164,9 +223,80 @@ h4 {
 
 #banner {
     position: relative;
-    width: 100%;
     height: 686px;
-    background: #1eb29a;
+    background: #212529;
+    overflow: hidden;
+}
+
+.banner-img {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#banner img {
+    max-width: none;
+}
+
+.banner-arrow {
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.banner-arrow.point-left {
+    left: 20px;
+}
+
+.banner-arrow.point-right {
+    right: 20px;
+}
+
+.banner-arrow svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    stroke: white;
+    stroke-width: 1.5px;
+}
+
+.banner-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.banner-text .line1 {
+    font-family: Poppins;
+    font-size: 17px;
+    color: #ab8b65;
+    text-transform: uppercase;
+}
+
+.banner-text .line2 {
+    font-family: Oswald-Bold;
+    font-size: 53px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.banner-text .line3 {
+    width: 100%;
+    font-family: Poppins;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
 }
 
 /* header */
