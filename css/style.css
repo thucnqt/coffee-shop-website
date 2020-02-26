@@ -163,6 +163,16 @@ cách tạo: .animation.tên-animation {} và @keyframes tên-animation {} */
     100% {transform: translateY(50%);opacity: 0;}
 }
 
+@keyframes arrow-fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes arrow-fade-out {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
 .animation.go-up {
     animation: go-up 2s 1;
 }
@@ -228,6 +238,11 @@ h4 {
     overflow: hidden;
 }
 
+#banner:hover .banner-arrow {
+    visibility: visible;
+    animation: arrow-fade-in .3s 1;
+}
+
 .banner-img {
     position: absolute;
     height: 100%;
@@ -241,12 +256,15 @@ h4 {
 }
 
 .banner-arrow {
+    visibility: hidden;
     position: absolute;
     z-index: 1;
     width: 40px;
     height: 40px;
     top: 50%;
     transform: translateY(-50%);
+    animation: arrow-fade-out .3s 1;
+    transition: .3s;
 }
 
 .banner-arrow.point-left {
