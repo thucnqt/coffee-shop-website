@@ -22,6 +22,8 @@ Mô tả công việc thực:
 
   Thời gian dự kiến hoàn thành xong nội dung: Trưa thứ 3 (25/02/2020) (12.PM) và sau đó sẽ tổng hợp code thành một Source hoàn chỉnh. 
   - Ngày 25 nay hoàn thiện code các phần, fix các lỗi khi merge các phần lại với nhau. Tiếp tục chỉnh sửa css vì đang bị ảnh hưởng giữa bootstrap với phần css a Hiếu. 
-  - Công việc sẽ làm tiếp tục hoàn thiện phần giao diện. Hẹn 1 ngày teamwork hoàn chỉnh phần này. Chuẩn bị qua nội dung phần sau (ý tưởng thực hiện, nội dung nào có thể thêm xóa sửa ... ).
- 
+ Công việc cần làm: Tiếp tục hoàn tất các component.
+ Tổng kết ngày 25: Công việc đạt được: 60 % tiến độ template. Deadline hoàn tất:  3.pm Thứ 7 29/02/2020. 
+ Ngày 26: công việc đạt được: 65 % tiến độ template. (chỉnh sửa một số animation, js).
+
   2. Từ source code (html css javascript) ở phần 1 viết một chương trình bằng ngôn ngữ Python cho phép genarate thay đổi các nội dung trên website theo ý người dùng. (Sư dụng hướng đối tượng).
