@@ -25,6 +25,13 @@ cái nào có thể tái sử dụng cho phần của ae thì chỉ cần đặt
   src: url(../fonts/Poppins-Bold.otf);
 }
 
+.font {
+  font-family: Poppins,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0;
+}
 /* hết font chữ */
 
 body {
@@ -238,6 +245,17 @@ h4 {
   flex: 0 0 50%;
   max-width: 50%;
 }
+
+.row {
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.align-items-center {
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
 /* ----- hết toàn trang ----- */
 
 /* banner */
@@ -279,6 +297,13 @@ h4 {
   background-size: 160%;
 }
 
+.reservations-content {
+  padding: 48px 15px
+}
+
+.justify-content {
+  justify-content: center !important;
+}
 /* menu */
 
 #menu {
