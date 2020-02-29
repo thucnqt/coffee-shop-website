@@ -25,5 +25,11 @@ Mô tả công việc thực:
  Công việc cần làm: Tiếp tục hoàn tất các component.
  Tổng kết ngày 25: Công việc đạt được: 60 % tiến độ template. Deadline hoàn tất:  3.pm Thứ 7 29/02/2020. 
  Ngày 26: công việc đạt được: 65 % tiến độ template. (chỉnh sửa một số animation, js).
+ Ngày 29/02/2020:  3.pm: Hoàn tất hết các component, thiếu js phần about.
+ Công việc tiếp tục bổ sung phần hiệu ứng ở about. Kết thúc công việc này hết ngày hôm nay.
+ Công việc sẽ làm:
+  - Bắt đầu chuyển qua phần 2, mọi người cùng nhau thảo luận và viết các class từng component, em sẽ chia sau và thông báo 
+  trên telegram.
+  - Hạn chót phần 2: Thứ 6 ngày 06/03/2020. Cụ thể sẽ báo cáo tiến độ 3.pm mỗi ngày.
 
   2. Từ source code (html css javascript) ở phần 1 viết một chương trình bằng ngôn ngữ Python cho phép genarate thay đổi các nội dung trên website theo ý người dùng. (Sư dụng hướng đối tượng).
