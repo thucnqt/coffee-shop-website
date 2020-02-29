@@ -4,429 +4,434 @@
 <html lang="en">
 
 <head>
-    <!-- require meta tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
     <title>Coffee Shop</title>
     <script src="jQuery/jquery-3.4.1.js"></script>
     <!-- iconify là javascript dùng để tạo biểu tượng facebook, twitter, linkedin... -->
     <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
-
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Include js plugin -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SocialIcons/1.0.1/soc.min.css">
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-    <title>Coffee Shop</title>
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <script src="gmaps/gmaps.js"></script>
+    <!-- photo lib -->
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js'></script>
 </head>
 
 <body>
 
-    <!-- Slide và phần menu -->
-    <div class = "container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <div id="carouselExampleControls" class="carousel-fade carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img id="image" src="img/coffee_slide-1.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption text-center">
-                        <p1>Hello World</p1>
-                        <h2>FRESH PORTO COFFEE</h2>
-                        <p2>Since 2001</p2>
-                        <a class="btn btn-outline-light btn-lg" href="#">Get Started</a>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/coffee_slide-2.jpg" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-            </div>
-          
-            <div id="menu-bar">
-            <div class="col-6 mx-auto text-center">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <a class="navbar-brand" href="#"></a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                      </li>
-                    </ul>
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    
-    
-    <script>
-      var $item = $('.carousel-item');
-      var $wHeight = $(window).height();
-    
-      $item.height($wHeight);
-      $item.addClass('full-screen');
-    
-      $('.carousel img').each(function() {
-        var $src = $(this).attr('src');
-        var $color = $(this).attr('data-color');
-        $(this).parent().css({
-          'background-image' : 'url(' + $src + ')',
-          'background-color' : $color
-        });
-        $(this).remove();
-      });
-    
-      $(window).on('resize', function (){
-        $wHeight = $(window).height();
-        $item.height($wHeight);
-      });
-    </script>
+    <!-- start of page -->
 
-   
+    <div id="page">
+
+        <!-- start of banner -->
+        <div id="banner" class="section">
+            <img src="img/coffee_slide-1.jpg" class="banner-img animation">
+            <img src="img/coffee_slide-2.jpg" class="banner-img animation">
+            <a class="banner-arrow point-left" href="/">
+                <svg height="14" width="7">
+                    <line x1="0" y1="7" x2="7" y2="0"></line>
+                    <line x1="0" y1="6" x2="7" y2="13"></line>
+                </svg>
+            </a>
+            <a class="banner-arrow point-right" href="/">
+                <svg height="14" width="7">
+                    <line x1="0" y1="0" x2="7" y2="7"></line>
+                    <line x1="0" y1="13" x2="7" y2="6"></line>
+                </svg>
+            </a>
+            <div class="banner-text">
+                <div class="line1 animation text1-up"><p>Welcome, enjoy the original</p></div>
+                <p class="line2 animation text2-up">fresh porto coffee</p>
+                <div class="line3 animation text3">
+                    <p id="typing"></span>
+                </div>
+                <a class="line4" href="/"><span class="line4 button animation text4-up" style="color: white;margin-top: 30px;">learn about us</span></a>
+            </div>
+        </div>
+        <!-- end of banner -->
+
+        <!-- start of header -->
+        <div id="header">
+            <div class="header-item header-vertical" id="header-main"><a href="/" class="header-link white">home</a></div>
+            <div class="header-item header-vertical" id="header-about"><a href="/" class="header-link white">about</a></div>
+            <div class="header-item header-vertical" id="header-reservations"><a href="/" class="header-link white">reservations</a></div>
+            <div class="header-item header-vertical" id="header-menu"><a href="/" class="header-link white">menu</a></div>
+            <div id="header-logo"><a href="/"><img src="img/logo.png" id="logo-img"></a></div>
+            <div class="header-item header-vertical" id="header-news"><a href="/" class="header-link white">news</a></div>
+            <div class="header-item header-vertical" id="header-locations"><a href="/" class="header-link white">locations</a></div>
+            <div class="header-item header-vertical"><a href="/" class="header-link white">elements</a></div>
+            <div class="header-item header-vertical"><a href="/" class="header-link white">buy porto!</a></div>
+        </div>
+        <!-- end of header -->
+
         <!-- start of main -->
         <div id="main">
 
             <!-- start of about -->
-            <div id="about">about</div>
+            <div id="about" class="section">
+                <div class="container">
+                    <div id="row_about" class="row">
+                        <div class="col-md-6">
+                            <div class="content_about">
+                                <h2>Enjoy the best taste of our 
+                                    tea</h2>
+                                <h2 id="border_about"></h2>
+                                <p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc.</p>
+                                <p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" id="btn_about"class="button btn-style" style="transform: translateX(-50%);"><p>view more</p></a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <img src = "img/coffee-others-1.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- end of about -->
 
             <!-- start of reservations -->
-            <div id="reservations">reservations</div>
+            <div id="reservations" class="section">
+                <div id ="content_res" class="row">
+                    <div class="col-md-6">
+                        <div id="best_color">
+                            <div class="wraper1">
+                                <h2>Reservations</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc.</p>
+                                <a href="tel:+0123456789">CALL US: 1-800-1234-5678</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="wraper2 d-flex">
+                            <div class="col-md-4">
+                                <h2>MON - FRI</h2>
+                                <p>10:00 AM
+                                    <br>
+                                    TO
+                                    <br>
+                                    8:00 PM</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h2>MON - FRI</h2>
+                                <p>10:00 AM
+                                    <br>
+                                    TO
+                                    <br>
+                                    8:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <!-- end of reservations -->
 
-            <!-- Start of menu -->
-            <!-- Welcome section of menu -->
-            <div id="menu">
-                <div class="container-fluid padding">
-                <div class="row menu text-center ">
-                    <div class="col-12 ">
-                        <h2 class="h2 on-scroll go-up ">Our Menu</h2>
-                        <hr class="draw-line on-scroll separator-line">
-                        <h4 class="sub-menu on-scroll go-up">orem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Phasellus blandit
-                            massa enim..</h4>
-                    </div>
-                </div>
-                <div id="menu-desc" class="container-fluid padding on-scroll go-up">
-                    <div class="row padding">
-                        <!-- Use the grid bootstrap system to create responsiveness -->
-                        <!-- First Column -->
-                        <div class="col-md-6">
-                            <!-- Coffee drink -->
-                            <div class="drink-header">
-                                <h3 class="drink-title">Coffee</h3>
-                                <p class="price"><small>$</small>2</p>
-                            </div>
-                            <div class="drink-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-
-                            <!-- Iced Coffee Drink -->
-                            <div class="drink-header">
-                                <h3 class="drink-title">Iced Coffee</h3>
-                                <p class="price"><small>$</small>3</p>
-                            </div>
-                            <div class="drink-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-                            <!-- Hot Chocolate -->
-                            <div class="drink-header">
-                                <h3 class="drink-title">Hot Chocolate</h3>
-                                <p class="price"><small>$</small>4</p>
-                            </div>
-                            <div class="drink-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-                            <!-- Iced Tea -->
-                            <div class="drink-header">
-                                <h3 class="drink-title">Iced Tea</h3>
-                                <p class="price"><small>$</small>3</p>
-                            </div>
-                            <div class="drink-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-                            <!-- Hot Tea -->
-                            <div class="drink-header">
-                                <h3 class="drink-title">Hot Tea</h3>
-                                <p class="price"><small>$</small>3</p>
-                            </div>
-                            <div class="drink-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-                            <!-- Soda -->
-                            <div class="drink-header">
-                                <h3 class="drink-title">Soda</h3>
-                                <p class="price"><small>$</small>2</p>
-                            </div>
-                            <div class="drink-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <!-- start of menu -->
+            <div id="menu" class="section">
+                    <div class="row">
+                        <div class="container d-flex justify-content-center">
+                            <div id="our_menu" class="col-md-6">
+                                <h2>Our Menu</h2>
+                                <hr></hr>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim.</p>
                             </div>
                         </div>
-
-                        <!-- Second Column -->
-                        <div class="col-md-6">
-                            <!-- Juice drink -->
-                            <div class="drink-header">
-                                <h3 class="drink-title">Juice Drink</h3>
-                                <p class="price"><small>$</small>2</p>
-                            </div>
-                            <div class="drink-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-                            <!-- Milk Drink -->
-                            <div class="drink-header">
-                                <h3 class="drink-title">Milk Drink</h3>
-                                <p class="price"><small>$</small>2</p>
-                            </div>
-                            <div class="drink-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-                            <!-- Chocolate Milk -->
-                            <div class="drink-header">
-                                <h3 class="drink-title">Chocolate Milk</h3>
-                                <p class="price"><small>$</small>2</p>
-                            </div>
-                            <div class="drink-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-                            <!-- Pancakes -->
-                            <div class="drink-header">
-                                <h3 class="drink-title">Pancakes</h3>
-                                <p class="price"><small>$</small>20</p>
-                            </div>
-                            <div class="drink-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-                            <!-- Egg Porto -->
-                            <div class="drink-header">
-                                <h3 class="drink-title">Egg Porto</h3>
-                                <p class="price"><small>$</small>3</p>
-                            </div>
-                            <div class="drink-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-                            <!-- Smashed Avocado -->
-                            <div class="drink-header">
-                                <h3 class="drink-title">Smashed Avocado</h3>
-                                <p class="price"><small>$</small>5</p>
-                            </div>
-                            <div class="drink-description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            </div>
-
-                        </div>
                     </div>
-
-                    <!-- Location Button -->
-                    <div class="container padding">
-                        <div class="col-xs-12 col-sm-12 text-center">
-                            <a href="#locations" class="btn btn-outline-primary" style="animation-delay: 200ms;">Where
-                                we are</a>
-                        </div>
-
+                    <div class="container">
+                        <div class="row">
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="info_item">
+                                            <h3>Coffee</h3>
+                                            <h3 class="borderdash"></h3>
+                                            <p><small>$  </small>2</p>
+                                        </div>
+                                        <div class="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="info_item">
+                                            <h3>Coffee</h3>
+                                            <h3 class="borderdash"></h3>
+                                            <p><small>$  </small>2</p>
+                                        </div>
+                                        <div class="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="info_item">
+                                            <h3>Coffee</h3>
+                                            <h3 class="borderdash"></h3>
+                                            <p><small>$  </small>2</p>
+                                        </div>
+                                        <div class="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="info_item">
+                                            <h3>Coffee</h3>
+                                            <h3 class="borderdash"></h3>
+                                            <p><small>$  </small>2</p>
+                                        </div>
+                                        <div class="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="info_item">
+                                            <h3>Coffee</h3>
+                                            <h3 class="borderdash"></h3>
+                                            <p><small>$  </small>2</p>
+                                        </div>
+                                        <div class="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="info_item">
+                                            <h3>Coffee</h3>
+                                            <h3 class="borderdash"></h3>
+                                            <p><small>$  </small>2</p>
+                                        </div>
+                                        <div class="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <div class="info_item">
+                                            <h3>Coffee</h3>
+                                            <h3 class="borderdash"></h3>
+                                            <p><small>$  </small>2</p>
+                                        </div>
+                                        <div class="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="info_item">
+                                            <h3>Coffee</h3>
+                                            <h3 class="borderdash"></h3>
+                                            <p><small>$  </small>2</p>
+                                        </div>
+                                        <div class="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="info_item">
+                                            <h3>Coffee</h3>
+                                            <h3 class="borderdash"></h3>
+                                            <p><small>$  </small>2</p>
+                                        </div>
+                                        <div class="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="info_item">
+                                            <h3>Coffee</h3>
+                                            <h3 class="borderdash"></h3>
+                                            <p><small>$  </small>2</p>
+                                        </div>
+                                        <div class="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="info_item">
+                                            <h3>Coffee</h3>
+                                            <h3 class="borderdash"></h3>
+                                            <p><small>$  </small>2</p>
+                                        </div>
+                                        <div class="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="info_item">
+                                            <h3>Coffee</h3>
+                                            <h3 class="borderdash"></h3>
+                                            <p><small>$  </small>2</p>
+                                        </div>
+                                        <div class="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btn-news" class="container">
+                                <a href="#" class="button btn-style" style="left: 50%;transform: translateX(-50%);"><p>where we are</p></a>
+                            </div>
                     </div>
-                </div>
             </div>
-                <!-- Order section of menu -->
+            <!-- end of menu -->
 
+            <!-- start of photos -->
+            <div id="photos">
+                <div class="content_photo owl-carousel owl-theme">
+                    <div class="item"><a class="thumbnail" href="img/coffee1.jpg" title=""><img src="img/coffee1.jpg"/><i class="fa fa-plus" aria-hidden="true"></i></a></div>
+                    <div class="item"><a class="thumbnail" href="img/coffee2.jpg" title=""><img src="img/coffee2.jpg"/><i class="fa fa-plus" aria-hidden="true"></i></a></div>
+                    <div class="item"><a class="thumbnail" href="img/coffee3.jpg" title=""><img src="img/coffee3.jpg"/><i class="fa fa-plus" aria-hidden="true"></i></a></div>
+                    <div class="item"><a class="thumbnail" href="img/coffee4.jpg" title=""><img src="img/coffee4.jpg"/><i class="fa fa-plus" aria-hidden="true"></i></a></div>
+                    <div class="item"><a class="thumbnail" href="img/coffee5.jpg" title=""><img src="img/coffee5.jpg"/><i class="fa fa-plus" aria-hidden="true"></i></a></div>
+                    <div class="item"><a class="thumbnail" href="img/coffee6.jpg" title=""><img src="img/coffee6.jpg"/><i class="fa fa-plus" aria-hidden="true"></i></a></div>
+                </div>
 
+            </div>
 
-                <!-- end of menu -->
+                <script>
+                $(document).ready(function(){
+                $(".content_photo").owlCarousel({
+                    autoPlay: true,
+                    items : 6,
+                    margin: 0,
+                    loop: false,
+                    dots: false,
+                    nav: true,
+                    responsive : {
+                    // breakpoint from 0 up
+                    0 : {
+                        items:1
+                    },
+                    // breakpoint from 480 up
+                    768 : {
+                        items:3
+                    },
+                    // breakpoint from 480 up
+                    1024 : {
+                        items:6
+                    },
+                    // breakpoint from 768 up
+                    1440 : {
+                        items:6
+                    }
+                    },
+                    animateOut: 'fadeOut'
+                });
 
-                <!-- start of photos -->
-            <div id="photos">photos</div>
+                });
 
-
-                <!-- end of photos -->
-
-                <!-- start of news -->
-            <div id="news">
+                // This will create a single gallery from all elements that have class "gallery-item"
+                $('.thumbnail').magnificPopup({
+                type: 'image',
+                gallery:{
+                    enabled: true
+                },
+                });
+                </script>
+            <div id="news" class="section">
+                <div class="container">
+                <div class="row">
                     <div class="custom-heading">
-                        <h2>
-                            <p class="on-scroll go-up">News & Events</p>
-                        </h2>
+                        <h2><p class="on-scroll go-up">News & Events</p></h2>
                         <div class="on-scroll draw-line separator-line"></div>
-                        <p class="on-scroll go-up">orem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                            blandit
-                            massa enim.</p>
+                        <p class="on-scroll go-up">orem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim.</p>
                     </div>
-                    <div class="news-content flex-center">
-
+                <div class="row">
                         <!-- ô tin tức 1 -->
-                        <div class="news-item flex-center-in">
-                            <a href="/">
-                                <h4 style="margin-bottom: 10px;">Amazing Things Are Coming</h4>
-                            </a>
-                            <p
-                                style="font-family: Poppins;font-size: 13px;color: #212529;font-weight: bold;margin-bottom: 10px;">
-                                <span class="iconify" data-icon="feather:clock" data-inline="false"
-                                    style="color: #ab8b65;transform: translateY(2px);"></span> May 16, 2019
-                            </p>
-                            <p style="font-family: Poppins;font-size: 13px;color: gray;margin-bottom: 20px;">Lorem ipsum
-                                dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet
-                                placerat et, bibendum nec mauris....</p>
-                            <p style="font-family: Poppins;font-size: 13px;font-weight: bold;">
-                                <img src="img/userpic.jpg"
-                                    style="max-width: 25px;border-radius: 50%;transform: translateY(10px);margin-right: 5px;">
-                                <span style="color: #212529;">by <a style="color: #ab8b65;" href="/">Joe</a></span>
-                            </p>
+                        <div class="col-md-4 border-news">
+                            <div class="news-item">
+                                <a href="/"><h4 style="margin-bottom: 10px;">Amazing Things Are Coming</h4></a>
+                                <p style="font-family: Poppins;font-size: 13px;color: #212529;font-weight: bold;margin-bottom: 10px;">
+                                    <span class="iconify" data-icon="feather:clock" data-inline="false" style="color: #ab8b65;transform: translateY(2px);"></span> May 16, 2019
+                                </p>
+                                <p style="font-family: Poppins;font-size: 13px;color: gray;margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris....</p>
+                                <p style="font-family: Poppins;font-size: 13px;font-weight: bold;">
+                                    <img src="img/userpic.jpg" style="max-width: 25px;border-radius: 50%;transform: translateY(10px);margin-right: 5px;">
+                                    <span style="color: #212529;">by <a style="color: #ab8b65;" href="/">Joe</a></span>
+                                </p>
+                            </div>
                         </div>
 
                         <!-- ô tin tức 2 -->
-                        <div class="news-item flex-center-in">
-                            <a href="/">
-                                <h4 style="margin-bottom: 10px;">Creative Business</h4>
-                            </a>
-                            <p
-                                style="font-family: Poppins;font-size: 13px;color: #212529;font-weight: bold;margin-bottom: 10px;">
-                                <span class="iconify" data-icon="feather:clock" data-inline="false"
-                                    style="color: #ab8b65;transform: translateY(2px);"></span> May 16, 2019
-                            </p>
-                            <p style="font-family: Poppins;font-size: 13px;color: gray;margin-bottom: 20px;">Lorem ipsum
-                                dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet
-                                placerat et, bibendum nec mauris....</p>
-                            <p style="font-family: Poppins;font-size: 13px;font-weight: bold;">
-                                <img src="img/userpic.jpg"
-                                    style="max-width: 25px;border-radius: 50%;transform: translateY(10px);margin-right: 5px;">
-                                <span style="color: #212529;">by <a style="color: #ab8b65;" href="/">Joe</a></span>
-                            </p>
+                        <div class="col-md-4 border-news">
+                            <div class="news-item">
+                                <a href="/"><h4 style="margin-bottom: 10px;">Creative Business</h4></a>
+                                <p style="font-family: Poppins;font-size: 13px;color: #212529;font-weight: bold;margin-bottom: 10px;">
+                                    <span class="iconify" data-icon="feather:clock" data-inline="false" style="color: #ab8b65;transform: translateY(2px);"></span> May 16, 2019
+                                </p>
+                                <p style="font-family: Poppins;font-size: 13px;color: gray;margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris....</p>
+                                <p style="font-family: Poppins;font-size: 13px;font-weight: bold;">
+                                    <img src="img/userpic.jpg" style="max-width: 25px;border-radius: 50%;transform: translateY(10px);margin-right: 5px;">
+                                    <span style="color: #212529;">by <a style="color: #ab8b65;" href="/">Joe</a></span>
+                                </p>
+                            </div>
                         </div>
 
                         <!-- ô tin tức 3 -->
-                        <div class="news-item flex-center-in">
-                            <a href="/">
-                                <h4 style="margin-bottom: 10px;">Night Life</h4>
-                            </a>
-                            <p
-                                style="font-family: Poppins;font-size: 13px;color: #212529;font-weight: bold;margin-bottom: 10px;">
-                                <span class="iconify" data-icon="feather:clock" data-inline="false"
-                                    style="color: #ab8b65;transform: translateY(2px);"></span> May 16, 2019
-                            </p>
-                            <p style="font-family: Poppins;font-size: 13px;color: gray;margin-bottom: 20px;">Lorem ipsum
-                                dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet
-                                placerat et, bibendum nec mauris....</p>
-                            <p style="font-family: Poppins;font-size: 13px;font-weight: bold;">
-                                <img src="img/userpic.jpg"
-                                    style="max-width: 25px;border-radius: 50%;transform: translateY(10px);margin-right: 5px;">
-                                <span style="color: #212529;">by <a style="color: #ab8b65;" href="/">Joe</a></span>
-                            </p>
+                        <div class="col-md-4 border-news">
+                            <div class="news-item">
+                                <a href="/"><h4 style="margin-bottom: 10px;">Night Life</h4></a>
+                                <p style="font-family: Poppins;font-size: 13px;color: #212529;font-weight: bold;margin-bottom: 10px;">
+                                    <span class="iconify" data-icon="feather:clock" data-inline="false" style="color: #ab8b65;transform: translateY(2px);"></span> May 16, 2019
+                                </p>
+                                <p style="font-family: Poppins;font-size: 13px;color: gray;margin-bottom: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris....</p>
+                                <p style="font-family: Poppins;font-size: 13px;font-weight: bold;">
+                                    <img src="img/userpic.jpg" style="max-width: 25px;border-radius: 50%;transform: translateY(10px);margin-right: 5px;">
+                                    <span style="color: #212529;">by <a style="color: #ab8b65;" href="/">Joe</a></span>
+                                </p>
+                            </div>
                         </div>
-
-                    </div>
-                    <a href="news/index.html" class="button" style="left: 50%;transform: translateX(-50%);">
-                        <p>view more</p>
-                    </a>
-            </div>
-                <!-- end of news -->
-
-                <!-- start of locations -->
-            <div id="locations">
-
-                    <!-- copy từ google -->
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12840999.705357522!2d-96.88814872754321!3d38.20967163648409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89a36872c91a5f45%3A0x26bb876ddf012ef7!2sUS-1%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1582303111836!5m2!1sen!2s"
-                        width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-
                 </div>
-                <!-- end of locations -->
             </div>
-            <!-- end of main -->
+                <div id="btn-news" class="container">
+                    <a href="news/index.html" class="button btn-style" style="left: 50%;transform: translateX(-50%);"><p>view more</p></a>
+                </div>
+            </div>
+            </div>
+            <!-- end of news -->
 
-            <!-- start of footer -->
-            <div id="footer">
+            <!-- start of locations -->
+            <div id="map" class="section">
+            </div>
+            <script>
+                //Viet nam locations ! 
+                var map = new GMaps({
+                  el: '#map',
+                  lat: 10.762622,
+                  lng: 106.660172
+                });
+            </script>
+        <div id="footer">
+            <div class="container text-center">
                 <div id="footer-image"><img src="img/logo-light.png"></div>
 
-                <!-- start of footer-info -->
-                <div id="footer-info" class="flex-center">
+            <!-- start of footer-info -->
+                <div id="footer-info" class="row">
                     <!-- mỗi class footer-address là một cột trong khung footer-info -->
                     <!-- cột 1 -->
-                    <div class="footer-address flex-center-in">
+                    <div class="col-lg-4  col-xs-12">
                         <p class="address-city">New York</p>
-                        <p class="address-phone" style="color: gray;">123, New York Street, New York <a
-                                style="color: white;">(123) 456-7890</a></p>
+                        <p class="address-phone" style="color: gray;">123, New York Street, New York <a style="color: white;">(123) 456-7890</a></p>
                         <p class="address-share">
-                            <div class="circle share fb"><span class="iconify" data-icon="fa-brands:facebook-f"
-                                    data-inline="false" style="color: white;"></span></div>
-                            <div class="circle share tw"><span class="iconify" data-icon="fa-brands:twitter"
-                                    data-inline="false" style="color: white;"></span></div>
-                            <div class="circle share in"><span class="iconify" data-icon="fa-brands:linkedin-in"
-                                    data-inline="false" style="color: white;"></span></div>
+                            <div class="circle share fb"><span class="iconify" data-icon="fa-brands:facebook-f" data-inline="false" style="color: white;"></span></div>
+                            <div class="circle share tw"><span class="iconify" data-icon="fa-brands:twitter" data-inline="false" style="color: white;"></span></div>
+                            <div class="circle share in"><span class="iconify" data-icon="fa-brands:linkedin-in" data-inline="false" style="color: white;"></span></div>
                         </p>
                     </div>
                     <!-- cột 2 -->
-                    <div class="footer-address flex-center-in">
+                    <div class="col-lg-4  col-xs-12">
                         <p class="address-city">Fresno</p>
-                        <p class="address-phone" style="color: gray;">123, Fresno Street, Fresno <a
-                                style="color: white;">(123) 456-7890</a></p>
+                        <p class="address-phone" style="color: gray;">123, Fresno Street, Fresno <a style="color: white;">(123) 456-7890</a></p>
                         <p class="address-share">
-                            <div class="circle share fb"><span class="iconify" data-icon="fa-brands:facebook-f"
-                                    data-inline="false" style="color: white;"></span></div>
-                            <div class="circle share tw"><span class="iconify" data-icon="fa-brands:twitter"
-                                    data-inline="false" style="color: white;"></span></div>
-                            <div class="circle share in"><span class="iconify" data-icon="fa-brands:linkedin-in"
-                                    data-inline="false" style="color: white;"></span></div>
+                            <div class="circle share fb"><span class="iconify" data-icon="fa-brands:facebook-f" data-inline="false" style="color: white;"></span></div>
+                            <div class="circle share tw"><span class="iconify" data-icon="fa-brands:twitter" data-inline="false" style="color: white;"></span></div>
+                            <div class="circle share in"><span class="iconify" data-icon="fa-brands:linkedin-in" data-inline="false" style="color: white;"></span></div>
                         </p>
                     </div>
                     <!-- cột 3 -->
-                    <div class="footer-address flex-center-in">
+                    <div class="col-lg-4">
                         <p class="address-city">Birmingham</p>
-                        <p class="address-phone" style="color: gray;">123, Birmingham Street, Birmingham <a
-                                style="color: white;">(123) 456-7890</a></p>
+                        <p class="address-phone" style="color: gray;">123, Birmingham Street, Birmingham <a style="color: white;"">(123) 456-7890</a></p>
                         <p class="address-share">
-                            <div class="circle share fb"><span class="iconify" data-icon="fa-brands:facebook-f"
-                                    data-inline="false" style="color: white;"></span></div>
-                            <div class="circle share tw"><span class="iconify" data-icon="fa-brands:twitter"
-                                    data-inline="false" style="color: white;"></span></div>
-                            <div class="circle share in"><span class="iconify" data-icon="fa-brands:linkedin-in"
-                                    data-inline="false" style="color: white;"></span></div>
+                            <div class="circle share fb"><span class="iconify" data-icon="fa-brands:facebook-f" data-inline="false" style="color: white;"></span></div>
+                            <div class="circle share tw"><span class="iconify" data-icon="fa-brands:twitter" data-inline="false" style="color: white;"></span></div>
+                            <div class="circle share in"><span class="iconify" data-icon="fa-brands:linkedin-in" data-inline="false" style="color: white;"></span></div>
                         </p>
                     </div>
                 </div>
                 <!-- end of footer-info -->
-
+            </div>
                 <div id="footer-copyright">
                     <p class="copyright">© copyright 2020. All Rights Reserved.</p>
                 </div>
-            </div>
-            <!-- end of footer -->
         </div>
+        <!-- end of footer -->
+    </div>
 
-        <!-- end of page -->
-
-        <!-- Bootstrap JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
+    <!-- end of page -->
 </body>
-
 <script src="js/script.js"></script>
-
 </html>

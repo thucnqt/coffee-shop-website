@@ -4,7 +4,7 @@ cái nào có thể tái sử dụng cho phần của ae thì chỉ cần đặt
 -- Trọng Hiếu */
 
 /* các font chữ */
-
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 @font-face {
     font-family: Oswald;
     src: url(../fonts/Oswald-Regular.ttf);
@@ -29,17 +29,19 @@ cái nào có thể tái sử dụng cho phần của ae thì chỉ cần đặt
 
 body {
     /* loại bỏ viền xung quanh */
+  
     margin: 0;
 }
 
 img {
     /* giới hạn kích cỡ img trong div */
     max-width: 100%;
+    max-height: 100%;
 }
 
 /* nếu ae dùng thêm heading mới (vd: h1), thêm kèm dấu phẩy (vd: p,h1,h2,h4)
 cái này để loại bỏ mép ngoài */
-p,h2,h4,h3 {
+p,h2,h4 {
     margin: 0;
 }
 
@@ -58,7 +60,7 @@ class="button" */
 .button {
     position: relative;
     display: inline-block;
-    height: 20px;
+    height: 57px;
     padding: 16px 38px;
     border: 4px solid #ab8b65;
     border-radius: 4px;
@@ -92,7 +94,7 @@ kích thước của từng div được quy định riêng */
 }
 
 .flex-center-in {
-    display: inline-block;  
+    display: inline-block;
 }
 
 /* tạo animation khi thanh cuộn kéo tới, sử dụng javascript
@@ -102,6 +104,76 @@ cách tạo: .animation.tên-animation {} và @keyframes tên-animation {} */
 
 .on-scroll {
     visibility: hidden;
+}
+
+.animation {
+    visibility: visible;
+}
+
+.animation.fading {
+    animation: fading 10s infinite;
+}
+
+@keyframes fading {
+    0% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.animation.text1-up {
+    animation: text1-up 10s infinite;
+}
+
+@keyframes text1-up {
+    0% {transform: translateY(20%);opacity: 0;}
+    10% {transform: none;opacity: 1;}
+    90% {transform: none;opacity: 1;}
+    100% {transform: translateY(20%);opacity: 0;}
+}
+
+.animation.text2-up {
+    animation: text2-up 10s infinite;
+}
+
+@keyframes text2-up {
+    0% {transform: translateY(10%); opacity: 0;}
+    10% {transform: translateY(10%); opacity: 0;}
+    20% {transform: none;opacity: 1;}
+    90% {transform: none;opacity: 1;}
+    100% {transform: translateY(10%);opacity: 0;}
+}
+
+.animation.text3 {
+    animation: text3 10s infinite;
+}
+
+@keyframes text3 {
+    0% {opacity: 0;}
+    1% {opacity: 1;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.animation.text4-up {
+    animation: text4-up 10s infinite;
+}
+
+@keyframes text4-up {
+    0% {transform: translateY(100%); opacity: 0;}
+    20% {transform: translateY(100%); opacity: 0;}
+    30% {transform: none;opacity: 1;}
+    90% {transform: none;opacity: 1;}
+    100% {transform: none;opacity: 0;}
+}
+
+@keyframes arrow-fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes arrow-fade-out {
+    from {opacity: 1;}
+    to {opacity: 0;}
 }
 
 .animation.go-up {
@@ -121,9 +193,6 @@ cách tạo: .animation.tên-animation {} và @keyframes tên-animation {} */
     0% {width: 0;}
     50% {width: 0;}
     100% {width: 135px;}
-}
-.animation.go-up.row{
-    animation: go-up 3s 1;
 }
 
 /* heading của từng phần */
@@ -146,18 +215,12 @@ h2 {
     font-size: 35px;
     color: #212529;
 }
-h3{
-    font-family: Oswald;
-    font-size: 14.4px;
-    color: #212529;
-}
 
 h4 {
     font-family: Oswald;
     font-size: 24px;
     color: #212529;
 }
-
 
 .separator-line {
     width: 135px;
@@ -173,18 +236,147 @@ h4 {
 
 #banner {
     position: relative;
-    width: 100%;
     height: 686px;
-    background: #1eb29a;
+    background: #212529;
+    overflow: hidden;
+}
+
+#banner:hover .banner-arrow {
+    visibility: visible;
+    animation: arrow-fade-in .3s 1;
+}
+
+.banner-img {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#banner img {
+    max-width: none;
+}
+
+.banner-arrow {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: arrow-fade-out .3s 1;
+    transition: .3s;
+}
+
+.banner-arrow.point-left {
+    left: 20px;
+}
+
+.banner-arrow.point-right {
+    right: 20px;
+}
+
+.banner-arrow svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    stroke: white;
+    stroke-width: 1.5px;
+}
+
+.banner-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.banner-text .line1 {
+    font-family: Poppins;
+    font-size: 17px;
+    color: #ab8b65;
+    text-transform: uppercase;
+}
+
+.banner-text .line2 {
+    font-family: Oswald-Bold;
+    font-size: 53px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.banner-text .line3 {
+    width: 100%;
+    font-family: Poppins;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
 }
 
 /* header */
 
 #header {
-    position: relative;
     width: 100%;
-    height: 122px;
     background: #212529;
+    justify-content: center;
+    display: flex;
+    z-index: 2;
+}
+
+.header-still {
+    position: relative;
+    max-height: 122px;
+}
+
+.header-scroll {
+    position: fixed;
+    top: 0;
+    max-height: 92px;
+}
+
+.header-item,#header-logo {
+    padding: 0 16px;
+    white-space: nowrap;
+}
+
+.header-vertical {
+    align-self: center;
+}
+
+#logo-img {
+    min-width: 148px;
+}
+
+.logo-still {
+    max-height: 170px;
+}
+
+.logo-scroll {
+    max-height: 130px;
+}
+
+#header a {
+    font-family: Oswald;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#header a.white {
+    color: white;
+}
+#header a.brown {
+    color: #ab8b65;
+}
+
+#header a:hover {
+    color: #ab8b65;
 }
 
 /* about */
@@ -192,116 +384,48 @@ h4 {
 #about {
     position: relative;
     width: 100%;
-    height: 476px;
     background: white;
 }
-
-/* reservations */
-
-#reservations {
-    position: relative;
-    width: 100%;
-    height: 472px;
-    background: #1c790d;
+#row_about{
+    padding: 110px 0;
 }
 
-
-/* ------------- phần của Hưng---------- */
+#border_about{
+    background: #AB8B65;
+    margin-top: 20px;
+    height: 4px;
+    width: 30%;
+}
+#btn_about{
+    margin-left: 72px;
+}
+.content_about{
+    padding: 0 10px;
+}
+.p1{
+    color: #777777;
+    font-size: 16.8px;
+    line-height: 1.5;
+    padding-top: 20px;
+    font-family: Poppins;
+}
+.p2{
+    color: rgba(119, 119, 119, 0.8);
+    font-size: 14px;
+    font-family: Poppins;
+    padding: 20px 0;
+}
+.content_about a:hover{
+    text-decoration: none;
+}
 /* menu */
 
 #menu {
     position: relative;
     width: 100%;
-    /* height: 1033px;
-    background: white;
-    padding: 110px 0px; */
-}
-.sub-menu{
-    max-width: 540px;
-    min-height: 64px;
-    font-family: Poppins;
-    font-size: 16.8px;
-    color: gray;
-    position: relative;
-    margin-bottom: 20px;
-    margin-right: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-#menu-desc{
-    /* margin: 0px 200px; */
-    box-sizing: border-box;
+    padding-bottom: 110px;
 }
 
-.drink-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-    flex: 0 0 100%;
-}
-.drink-header h3 {
-    position: relative;
-}
-.drink-header h3::after {
-    content: '';
-    position: absolute;
-    left: 100%;
-    margin-left: 20px;
-    width: 1000vw;
-    max-width: 100vw;
-    top: 75%;
-    border-bottom: 1px dashed #777;
-    opacity: .4;
-    
-}
-
-.drink-title{
-    font-weight:400;
-    font-size:21px;
-    line-height:24px;
-}
-
-.price{
-    font-weight:700;
-    font-size:20.8px;
-    line-height:26px;
-    color:#212529;
-    padding-left: 20px;
-    background-color: white;
-    z-index: 2;
-}
-.drink-description{
-    font-size:14px;
-}
-.padding{
-    padding-bottom: 48px;
-    /* padding-left: 150px;
-    padding-right: 150px; */
-}
-.btn{
-    position: relative;
-    display: inline-block;
-    padding: 16px 38px;
-    border: 4px solid #ab8b65;
-    border-radius: 4px;
-    font-family: Poppins-Bold;
-    font-size: 13px;
-    color: #ab8b65;
-    text-transform: uppercase;
-    transition: .3s;
-}
-.btn:hover {color: white;background: #ab8b65; border-color: #ab8b65;}
-
-/* photos */
-
-#photos {
-    position: relative;
-    width: 100%;
-    height: 211px;
-    background: #f9fb10;
-}
 
 /* ---------- phần của anh Hiếu ---------- */
 
@@ -311,7 +435,7 @@ h4 {
     position: relative;
     width: 100%;
     min-height: 168px;
-    margin: 110px 0;
+    padding: 110px 0;
     background: white;
 }
 
@@ -322,17 +446,26 @@ h4 {
 }
 
 .news-item {
-    width: 254px;
     background: #F6F3EF;
-    padding: 40px;
-    margin: 15px;
+    padding: 40px 48px;
     line-height: 25px;
 }
+#btn-news{
+    padding: 3px 0 3px 0;
+    position: relative;
+    margin: 35px 0 60px;
 
+}
+#btn-news a{
+    text-decoration: none;
+}
+.btn-style{
+    padding: 25px 35px 25px 35px; 
+}
 /* locations */
 
-#locations {
-    position: relative;
+#map {
+    padding-top: 60px;
     width: 100%;
     height: 600px;
     /* background: #1c790d; */
@@ -361,10 +494,6 @@ h4 {
 
 /* khung địa chỉ, thông in liên lạc */
 
-#footer-info {
-    max-width: 90%;
-    min-height: 150px;
-}
 
 /* từng cột trong khung */
 
@@ -375,6 +504,7 @@ h4 {
 }
 
 .address-city {
+    margin-bottom: 4px;
     font-family: Oswald-Bold;
     color: white;
     font-size: 22px;
@@ -384,14 +514,14 @@ h4 {
 .address-phone {
     font-family: Poppins;
     font-size: 13px;
+    text-align: center;
     overflow: hidden;
+    margin: -3px 24px 24px;
+    padding: 0 48px;
+    line-height: 1.4;
 }
 
 /* biểu tượng share (facebook, twitter, linkedin...) */
-
-.address-share {
-    padding-top: 5px;
-}
 
 .share {
     width: 30px;
@@ -436,34 +566,173 @@ p.copyright {
 
 /* ---------- hết phần của anh Hiếu ---------- */
 
-
-/* CSS của Thức */
-
-.container-fluid{
-  padding: 0;
-
+/* custome bootstrap */
+.container{
+    margin: 0 auto;
+    padding: 0 auto;
 }
-.full-screen{
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 
-}
+/* CSS phan menu */
 
 #menu-bar{
-  color: #777777;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
-  min-height: 122px;
-  background: #212529;
+    padding: 110px 0 110px 0;
+    margin: 0;
+    background: #F7F7F7;
 }
-.navbar-light{
-  background: none !important;
+#our_menu{
+    padding-top: 110px;
+    text-align: center;
 }
-.nav-link{
-  color: #777777 !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  display: flex; 
-  justify-content: center;
+#our_menu h2{
+    color: #212529;
+    font-family: Oswald-Bold;
+    font-size: 35px;
+    font-weight: bold;
 }
-/* Kết thúc CSS của Thức */
+#our_menu hr{
+    background: #AB8B65;
+    height: 4px;
+    width: 25%;
+}
+#our_menu p{
+    color: #777777;
+    font-size: 16.8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.item .info_item{
+    display: flex;
+    white-space: nowrap;
+    width: auto;
+}
+.info_item h3{
+    font-size: 21px;
+    margin-top: 7px;
+    font-family: 'Oswald', sans-serif;
+}
+.info_item p{
+    color: #212529;
+    font-size: 20.8px;
+    font-family: 'Playfair Display',sans-serif ;
+    font-weight: 700;
+}
+
+.info_item small{
+    font-weight: 700;
+    font-size: 12.48px;
+    color: #212529;
+    font-family: 'Playfair Display',sans-serif ;
+}
+
+.borderdash{
+    width: 100%;
+    border-bottom: dashed 1px #777;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.detail{
+    font-family: Poppins;
+    font-size: 14px;
+    color: #777777;
+    padding-bottom: 5px;
+}
+
+/* css photo */
+/* photos */
+
+#photos {
+    margin: 0 auto;
+    position: relative;
+}
+.item {
+    position: relative;
+  }
+.item i {
+    display: none;
+    font-size: 4rem;
+    color: #FFF;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.item a {
+    display: block;
+    width: 100%;
+  }
+  .item a:hover:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+  .item a:hover i {
+    display: block;
+    z-index: 2;
+  }
+
+/* css reservations */
+/* reservations */
+
+#reservations {
+    position: relative;
+    width: 100%;
+    background: url(../img/coffee-background-1.jpg )
+}
+
+.wraper1{
+    line-height: 1.2;
+    text-align: center;
+    padding: 48px 20px 48px 150px;
+}
+.wraper1 h2{
+    font-size: 32px;
+    font-family: Oswald;
+    color: rgba(255, 255, 255);
+    font-weight: 700;
+}
+.wraper1 p{
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    font-family: Poppins;
+}
+.wraper1 a{
+    text-decoration: inherit;
+    outline: none;
+    font-family: Poppins;
+    color: #AB8B64;
+    font-weight: 1000;
+
+}
+.wraper1 a:hover{
+    text-decoration: none;
+    color: #AB8B64;
+}
+.wraper2{
+    padding: 40px;
+    line-height: 1.8;
+    text-align: center;
+}
+.wraper2 h2{
+    font-size: 35px;
+    font-family: Oswald;
+    color: rgba(255, 255, 255);
+    font-weight: 700;
+}
+.wraper2 p{
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    font-family: Poppins;
+}
+#best_color{
+    border-radius: 5%;
+    background: rgba(38, 41, 44, 0.5);
+}
+#content_res{
+    padding: 110px 0 110px 0;
+}
