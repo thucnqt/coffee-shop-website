@@ -29,8 +29,10 @@ cái nào có thể tái sử dụng cho phần của ae thì chỉ cần đặt
 
 body {
     /* loại bỏ viền xung quanh */
-  
     margin: 0;
+}
+a {
+    text-decoration: none !important;
 }
 
 img {
@@ -415,9 +417,8 @@ h4 {
     font-family: Poppins;
     padding: 20px 0;
 }
-.content_about a:hover{
-    text-decoration: none;
-}
+
+
 /* menu */
 
 #menu {
@@ -710,7 +711,6 @@ p.copyright {
 
 }
 .wraper1 a:hover{
-    text-decoration: none;
     color: #AB8B64;
 }
 .wraper2{
