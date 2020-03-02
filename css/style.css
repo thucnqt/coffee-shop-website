@@ -534,7 +534,7 @@ h4 {
     height: 76px;
 }
 
-p.copyright {
+p#copyright {
     font-family: Poppins;
     font-size: 12px;
     color: gray;
