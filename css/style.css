@@ -388,6 +388,16 @@ h4 {
     width: 100%;
     background: white;
 }
+.content_about{
+    padding: 20px 10px 0 10px;
+}
+.space{
+    margin: 3%;
+}
+#about_img{
+    padding-top: 20px;
+}
+
 #row_about{
     padding: 110px 0; 
 }
@@ -401,9 +411,7 @@ h4 {
 #btn_about{
     margin-left: 72px;
 }
-.content_about{
-    padding: 0 10px;
-}
+
 .p1{
     color: #777777;
     font-size: 16.8px;
@@ -683,7 +691,9 @@ p.copyright {
 #reservations {
     position: relative;
     width: 100%;
-    background: url(../img/coffee-background-1.jpg )
+    background: url(../img/coffee-background-1.jpg );
+    background-repeat: no-repeat fixed center;
+
 }
 
 .wraper1{
