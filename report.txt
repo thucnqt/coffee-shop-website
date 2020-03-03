@@ -34,11 +34,14 @@ Mô tả công việc thực:
 
   2. Từ source code (html css javascript) ở phần 1 viết một chương trình bằng ngôn ngữ Python cho phép genarate thay đổi các nội dung trên website theo ý người dùng. (Sư dụng hướng đối tượng).
   Thứ hai 02/03/2020
-  - A Hiếu Nguyễn: Viết phần Footer -- Tiến độ: 80%
+  - A Hiếu Nguyễn: Viết phần Footer -- Tiến độ: 100%.
   - A Hưng: Phần menu --Tiến độ: 0%
   - A Hiếu Hiếu: Phần Locations -- Tiến độ: 0%
   - Thức: News, Photo -- Tiến độ: 0%
-  Thứ 3: 03/03/2020 
+  Thứ 3: 03/03/2020:
+  - A Hiếu Nguyễn: Viết tiếp component (1): Banner
+  Mọi người viết tiếp hoàn tất nội dung công việc thứ 2.
+  
 Cuối ngày thứ 2: Mỗi người cập nhật tiến độ đạt được, nêu rõ đã làm việc thao tác như thế nào, kết quả sao, hướng đi, cách thức thực hiện. Khó khăn và thuận lợi khi thực hiện theo cách đó. 
 
 ---****---
