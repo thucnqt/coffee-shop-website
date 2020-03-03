@@ -1,0 +1,792 @@
+<!-- tạo layout hoàn chỉnh trước tiên -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Coffee Shop
+  </title>
+  <script src="jQuery/jquery-3.4.1.js">
+  </script>
+  <!-- iconify là javascript dùng để tạo biểu tượng facebook, twitter, linkedin... -->
+  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">
+  </script>
+  <link href="css/style.css" rel="stylesheet"/>
+  <!-- Default Theme -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <!-- Include js plugin -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/SocialIcons/1.0.1/soc.min.css" rel="stylesheet"/>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+  </script>
+  <script src="http://maps.google.com/maps/api/js">
+  </script>
+  <script src="js/gmaps.js">
+  </script>
+  <!-- photo lib -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet prefetch"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet prefetch"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet prefetch"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
+  </script>
+ </head>
+ <body>
+  <!-- start of page -->
+  <div id="page">
+   <!-- start of banner -->
+   <div class="section" id="banner">
+    <img class="banner-img animation" src="img/coffee_slide-1.jpg"/>
+    <img class="banner-img animation" src="img/coffee_slide-2.jpg"/>
+    <a class="banner-arrow point-left" href="/">
+     <svg height="14" width="7">
+      <line x1="0" x2="7" y1="7" y2="0">
+      </line>
+      <line x1="0" x2="7" y1="6" y2="13">
+      </line>
+     </svg>
+    </a>
+    <a class="banner-arrow point-right" href="/">
+     <svg height="14" width="7">
+      <line x1="0" x2="7" y1="0" y2="7">
+      </line>
+      <line x1="0" x2="7" y1="13" y2="6">
+      </line>
+     </svg>
+    </a>
+    <div class="banner-text">
+     <div class="line1 animation text1-up">
+      <p>
+       Welcome, enjoy the original
+      </p>
+     </div>
+     <p class="line2 animation text2-up">
+      fresh porto coffee
+     </p>
+     <div class="line3 animation text3">
+      <p id="typing">
+      </p>
+     </div>
+     <a class="line4" href="/">
+      <span class="line4 button animation text4-up" style="color: white;margin-top: 30px;">
+       learn about us
+      </span>
+     </a>
+    </div>
+   </div>
+   <!-- end of banner -->
+   <!-- start of header -->
+   <div id="header">
+    <div class="header-item header-vertical" id="header-main">
+     <a class="header-link white" href="/">
+      home
+     </a>
+    </div>
+    <div class="header-item header-vertical" id="header-about">
+     <a class="header-link white" href="/">
+      about
+     </a>
+    </div>
+    <div class="header-item header-vertical" id="header-reservations">
+     <a class="header-link white" href="/">
+      reservations
+     </a>
+    </div>
+    <div class="header-item header-vertical" id="header-menu">
+     <a class="header-link white" href="/">
+      menu
+     </a>
+    </div>
+    <div id="header-logo">
+     <a href="/">
+      <img id="logo-img" src="img/logo.png"/>
+     </a>
+    </div>
+    <div class="header-item header-vertical" id="header-news">
+     <a class="header-link white" href="/">
+      news
+     </a>
+    </div>
+    <div class="header-item header-vertical" id="header-locations">
+     <a class="header-link white" href="/">
+      locations
+     </a>
+    </div>
+    <div class="header-item header-vertical">
+     <a class="header-link white" href="/">
+      elements
+     </a>
+    </div>
+    <div class="header-item header-vertical">
+     <a class="header-link white" href="/">
+      buy porto!
+     </a>
+    </div>
+   </div>
+   <!-- end of header -->
+   <!-- start of main -->
+   <div id="main">
+    <!-- start of about -->
+    <div class="section" id="about">
+     <div class="container">
+      <div class="row" id="row_about">
+       <div class="col-md-6">
+        <div class="content_about">
+         <div class="rotator-word">
+          <h2>
+           Enjoy the best taste of our
+           <span class="rotator-words">
+            <span>
+             tea
+            </span>
+            <span>
+             coffee
+            </span>
+            <span>
+             desert
+            </span>
+            <span>
+             breakfast
+            </span>
+            <span>
+             dinner
+            </span>
+            <span>
+             chill out
+            </span>
+           </span>
+          </h2>
+         </div>
+         <h2 id="border_about">
+         </h2>
+         <p class="p1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc.
+         </p>
+         <p class="p2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </p>
+         <a class="button btn-style" href="#" id="btn_about" style="transform: translateX(-50%);">
+          <p>
+           view more
+          </p>
+         </a>
+        </div>
+       </div>
+       <div class="col-md-6">
+        <img id="about_img" src="img/coffee-others-1.jpg"/>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- end of about -->
+    <!-- start of reservations -->
+    <div class="section" id="reservations">
+     <div class="row" id="content_res">
+      <div class="col-md-6">
+       <div id="best_color">
+        <div class="wraper1">
+         <h2>
+          Reservations
+         </h2>
+         <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc.
+         </p>
+         <a href="tel:+0123456789">
+          CALL US: 1-800-1234-5678
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="col-md-6">
+       <div class="wraper2">
+        <div class="row">
+         <div class="space col-md-4">
+          <h2>
+           MON - FRI
+          </h2>
+          <p>
+           10:00 AM
+           <br/>
+           TO
+           <br/>
+           8:00 PM
+          </p>
+         </div>
+         <div class="space col-md-4">
+          <h2>
+           MON - FRI
+          </h2>
+          <p>
+           10:00 AM
+           <br/>
+           TO
+           <br/>
+           8:00 PM
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- end of reservations -->
+    <!-- start of menu -->
+    <div class="section" id="menu">
+     <div class="row">
+      <div class="container d-flex justify-content-center">
+       <div class="col-md-6 on-scroll go-up" id="our_menu">
+        <h2>
+         Our Menu
+        </h2>
+        <hr/>
+        <p>
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="container">
+      <div class="row">
+       <div class="col-md-6 on-scroll go-up">
+        <div class="item">
+         <div class="info_item">
+          <h3>
+           Coffee
+          </h3>
+          <h3 class="borderdash">
+          </h3>
+          <p>
+           <small>
+            $
+           </small>
+           2
+          </p>
+         </div>
+         <div class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </div>
+        </div>
+        <div class="item">
+         <div class="info_item">
+          <h3>
+           Coffee
+          </h3>
+          <h3 class="borderdash">
+          </h3>
+          <p>
+           <small>
+            $
+           </small>
+           2
+          </p>
+         </div>
+         <div class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </div>
+        </div>
+        <div class="item">
+         <div class="info_item">
+          <h3>
+           Coffee
+          </h3>
+          <h3 class="borderdash">
+          </h3>
+          <p>
+           <small>
+            $
+           </small>
+           2
+          </p>
+         </div>
+         <div class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </div>
+        </div>
+        <div class="item">
+         <div class="info_item">
+          <h3>
+           Coffee
+          </h3>
+          <h3 class="borderdash">
+          </h3>
+          <p>
+           <small>
+            $
+           </small>
+           2
+          </p>
+         </div>
+         <div class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </div>
+        </div>
+        <div class="item">
+         <div class="info_item">
+          <h3>
+           Coffee
+          </h3>
+          <h3 class="borderdash">
+          </h3>
+          <p>
+           <small>
+            $
+           </small>
+           2
+          </p>
+         </div>
+         <div class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </div>
+        </div>
+        <div class="item">
+         <div class="info_item">
+          <h3>
+           Coffee
+          </h3>
+          <h3 class="borderdash">
+          </h3>
+          <p>
+           <small>
+            $
+           </small>
+           2
+          </p>
+         </div>
+         <div class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </div>
+        </div>
+       </div>
+       <div class="col-md-6 on-scroll go-up">
+        <div class="item">
+         <div class="info_item">
+          <h3>
+           Coffee
+          </h3>
+          <h3 class="borderdash">
+          </h3>
+          <p>
+           <small>
+            $
+           </small>
+           2
+          </p>
+         </div>
+         <div class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </div>
+        </div>
+        <div class="item">
+         <div class="info_item">
+          <h3>
+           Coffee
+          </h3>
+          <h3 class="borderdash">
+          </h3>
+          <p>
+           <small>
+            $
+           </small>
+           2
+          </p>
+         </div>
+         <div class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </div>
+        </div>
+        <div class="item">
+         <div class="info_item">
+          <h3>
+           Coffee
+          </h3>
+          <h3 class="borderdash">
+          </h3>
+          <p>
+           <small>
+            $
+           </small>
+           2
+          </p>
+         </div>
+         <div class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </div>
+        </div>
+        <div class="item">
+         <div class="info_item">
+          <h3>
+           Coffee
+          </h3>
+          <h3 class="borderdash">
+          </h3>
+          <p>
+           <small>
+            $
+           </small>
+           2
+          </p>
+         </div>
+         <div class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </div>
+        </div>
+        <div class="item">
+         <div class="info_item">
+          <h3>
+           Coffee
+          </h3>
+          <h3 class="borderdash">
+          </h3>
+          <p>
+           <small>
+            $
+           </small>
+           2
+          </p>
+         </div>
+         <div class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </div>
+        </div>
+        <div class="item">
+         <div class="info_item">
+          <h3>
+           Coffee
+          </h3>
+          <h3 class="borderdash">
+          </h3>
+          <p>
+           <small>
+            $
+           </small>
+           2
+          </p>
+         </div>
+         <div class="detail">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="container" id="btn-news">
+       <a class="button btn-style on-scroll go-up" href="#" style="left: 50%;transform: translateX(-50%);">
+        <p>
+         where we are
+        </p>
+       </a>
+      </div>
+     </div>
+    </div>
+    <!-- end of menu -->
+    <!-- start of photos -->
+    <div id="photos">
+     <div class="content_photo owl-carousel owl-theme">
+      <div class="item">
+       <a class="thumbnail" href="img/coffee1.jpg" title="">
+        <img src="img/coffee1.jpg"/>
+        <i aria-hidden="true" class="fa fa-plus">
+        </i>
+       </a>
+      </div>
+      <div class="item">
+       <a class="thumbnail" href="img/coffee2.jpg" title="">
+        <img src="img/coffee2.jpg"/>
+        <i aria-hidden="true" class="fa fa-plus">
+        </i>
+       </a>
+      </div>
+      <div class="item">
+       <a class="thumbnail" href="img/coffee3.jpg" title="">
+        <img src="img/coffee3.jpg"/>
+        <i aria-hidden="true" class="fa fa-plus">
+        </i>
+       </a>
+      </div>
+      <div class="item">
+       <a class="thumbnail" href="img/coffee4.jpg" title="">
+        <img src="img/coffee4.jpg"/>
+        <i aria-hidden="true" class="fa fa-plus">
+        </i>
+       </a>
+      </div>
+      <div class="item">
+       <a class="thumbnail" href="img/coffee5.jpg" title="">
+        <img src="img/coffee5.jpg"/>
+        <i aria-hidden="true" class="fa fa-plus">
+        </i>
+       </a>
+      </div>
+      <div class="item">
+       <a class="thumbnail" href="img/coffee6.jpg" title="">
+        <img src="img/coffee6.jpg"/>
+        <i aria-hidden="true" class="fa fa-plus">
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+    <script>
+     $(document).ready(function(){
+                $(".content_photo").owlCarousel({
+                    autoPlay: true,
+                    items : 6,
+                    margin: 0,
+                    loop: false,
+                    dots: false,
+                    nav: true,
+                    responsive : {
+                    // breakpoint from 0 up
+                    0 : {
+                        items:1
+                    },
+                    // breakpoint from 480 up
+                    768 : {
+                        items:3
+                    },
+                    // breakpoint from 480 up
+                    1024 : {
+                        items:6
+                    },
+                    // breakpoint from 768 up
+                    1440 : {
+                        items:6
+                    }
+                    },
+                    animateOut: 'fadeOut'
+                });
+
+                });
+
+                // This will create a single gallery from all elements that have class "gallery-item"
+                $('.thumbnail').magnificPopup({
+                type: 'image',
+                gallery:{
+                    enabled: true
+                },
+                });
+    </script>
+    <div class="section" id="news">
+     <div class="container">
+      <div class="row">
+       <div class="custom-heading">
+        <h2>
+        </h2>
+        <p class="on-scroll go-up">
+         News &amp; Events
+        </p>
+        <div class="on-scroll draw-line separator-line">
+        </div>
+        <p class="on-scroll go-up">
+         orem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim.
+        </p>
+       </div>
+       <div class="row">
+        <!-- ô tin tức 1 -->
+        <div class="col-md-4 border-news">
+         <div class="news-item">
+          <a href="/">
+           <h4 style="margin-bottom: 10px;">
+            Amazing Things Are Coming
+           </h4>
+          </a>
+          <p style="font-family: Poppins;font-size: 13px;color: #212529;font-weight: bold;margin-bottom: 10px;">
+           <span class="iconify" data-icon="feather:clock" data-inline="false" style="color: #ab8b65;transform: translateY(2px);">
+           </span>
+           May 16, 2019
+          </p>
+          <p style="font-family: Poppins;font-size: 13px;color: gray;margin-bottom: 20px;">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris....
+          </p>
+          <p style="font-family: Poppins;font-size: 13px;font-weight: bold;">
+           <img src="img/userpic.jpg" style="max-width: 25px;border-radius: 50%;transform: translateY(10px);margin-right: 5px;"/>
+           <span style="color: #212529;">
+            by
+            <a href="/" style="color: #ab8b65;">
+             Joe
+            </a>
+           </span>
+          </p>
+         </div>
+        </div>
+        <!-- ô tin tức 2 -->
+        <div class="col-md-4 border-news">
+         <div class="news-item">
+          <a href="/">
+           <h4 style="margin-bottom: 10px;">
+            Creative Business
+           </h4>
+          </a>
+          <p style="font-family: Poppins;font-size: 13px;color: #212529;font-weight: bold;margin-bottom: 10px;">
+           <span class="iconify" data-icon="feather:clock" data-inline="false" style="color: #ab8b65;transform: translateY(2px);">
+           </span>
+           May 16, 2019
+          </p>
+          <p style="font-family: Poppins;font-size: 13px;color: gray;margin-bottom: 20px;">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris....
+          </p>
+          <p style="font-family: Poppins;font-size: 13px;font-weight: bold;">
+           <img src="img/userpic.jpg" style="max-width: 25px;border-radius: 50%;transform: translateY(10px);margin-right: 5px;"/>
+           <span style="color: #212529;">
+            by
+            <a href="/" style="color: #ab8b65;">
+             Joe
+            </a>
+           </span>
+          </p>
+         </div>
+        </div>
+        <!-- ô tin tức 3 -->
+        <div class="col-md-4 border-news">
+         <div class="news-item">
+          <a href="/">
+           <h4 style="margin-bottom: 10px;">
+            Night Life
+           </h4>
+          </a>
+          <p style="font-family: Poppins;font-size: 13px;color: #212529;font-weight: bold;margin-bottom: 10px;">
+           <span class="iconify" data-icon="feather:clock" data-inline="false" style="color: #ab8b65;transform: translateY(2px);">
+           </span>
+           May 16, 2019
+          </p>
+          <p style="font-family: Poppins;font-size: 13px;color: gray;margin-bottom: 20px;">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lectus lacus, rutrum sit amet placerat et, bibendum nec mauris....
+          </p>
+          <p style="font-family: Poppins;font-size: 13px;font-weight: bold;">
+           <img src="img/userpic.jpg" style="max-width: 25px;border-radius: 50%;transform: translateY(10px);margin-right: 5px;"/>
+           <span style="color: #212529;">
+            by
+            <a href="/" style="color: #ab8b65;">
+             Joe
+            </a>
+           </span>
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="container" id="btn-news">
+       <a class="button btn-style" href="news/index.html" style="left: 50%;transform: translateX(-50%);">
+        <p>
+         view more
+        </p>
+       </a>
+      </div>
+     </div>
+    </div>
+    <!-- end of news -->
+    <!-- start of locations -->
+    <div class="section" id="map">
+    </div>
+    <script>
+     //Viet nam locations !
+                var map = new GMaps({
+                  el: '#map',
+                  lat: 10.762622,
+                  lng: 106.660172,
+                });
+    </script>
+    <div id="footer">
+     <div class="container text-center">
+      <div id="footer-image">
+       <img src="img/logo-light.png"/>
+      </div>
+      <!-- start of footer-info -->
+      <div class="row" id="footer-info">
+       <!-- mỗi class footer-address là một cột trong khung footer-info -->
+       <!-- cột 1 -->
+       <div class="col-lg-4 col-xs-12">
+        <p class="address-city">
+         New York
+        </p>
+        <p class="address-phone" style="color: gray;">
+         1231111111111111111111111111111111111111, New York Street12111111111111111113, New York
+         <a style="color: white;">
+          (123) 456-7890
+         </a>
+        </p>
+        <p class="address-share">
+        </p>
+        <div class="circle share fb">
+         <span class="iconify" data-icon="fa-brands:facebook-f" data-inline="false" style="color: white;">
+         </span>
+        </div>
+        <div class="circle share tw">
+         <span class="iconify" data-icon="fa-brands:twitter" data-inline="false" style="color: white;">
+         </span>
+        </div>
+        <div class="circle share in">
+         <span class="iconify" data-icon="fa-brands:linkedin-in" data-inline="false" style="color: white;">
+         </span>
+        </div>
+       </div>
+       <!-- cột 2 -->
+       <div class="col-lg-4 col-xs-12">
+        <p class="address-city">
+         Fresno
+        </p>
+        <p class="address-phone" style="color: gray;">
+         123, Fresno Street, Fresno
+         <a style="color: white;">
+          (123) 456-7890
+         </a>
+        </p>
+        <p class="address-share">
+        </p>
+        <div class="circle share fb">
+         <span class="iconify" data-icon="fa-brands:facebook-f" data-inline="false" style="color: white;">
+         </span>
+        </div>
+        <div class="circle share tw">
+         <span class="iconify" data-icon="fa-brands:twitter" data-inline="false" style="color: white;">
+         </span>
+        </div>
+        <div class="circle share in">
+         <span class="iconify" data-icon="fa-brands:linkedin-in" data-inline="false" style="color: white;">
+         </span>
+        </div>
+       </div>
+       <!-- cột 3 -->
+       <div class="col-lg-4">
+        <p class="address-city">
+         Birmingham
+        </p>
+        <p class="address-phone" style="color: gray;">
+         123, Birmingham Street, Birmingham
+         <a style="color: white;">
+          (123) 456-7890
+         </a>
+        </p>
+        <p class="address-share">
+        </p>
+        <div class="circle share fb">
+         <span class="iconify" data-icon="fa-brands:facebook-f" data-inline="false" style="color: white;">
+         </span>
+        </div>
+        <div class="circle share tw">
+         <span class="iconify" data-icon="fa-brands:twitter" data-inline="false" style="color: white;">
+         </span>
+        </div>
+        <div class="circle share in">
+         <span class="iconify" data-icon="fa-brands:linkedin-in" data-inline="false" style="color: white;">
+         </span>
+        </div>
+       </div>
+      </div>
+      <!-- end of footer-info -->
+     </div>
+     <div id="footer-copyright">
+      <p id="copyright">
+       © copyright 2021. All Rights Reservedaaa.
+      </p>
+     </div>
+    </div>
+    <!-- end of footer -->
+   </div>
+   <!-- end of page -->
+  </div>
+ </body>
+ <script src="js/script.js">
+ </script>
+</html>
