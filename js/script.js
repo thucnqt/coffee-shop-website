@@ -1,8 +1,7 @@
 // hàm slideshow
-
 var myIndex = 0;
 function slideshow() {
-    var txt = ["The amazing flavors will blow your mind.","Since 2001 with you."][myIndex];
+    var txt = [document.getElementById("bannertyping1").innerHTML,document.getElementById("bannertyping2").innerHTML][myIndex];
     var c = 0;
     document.getElementById("typing").innerHTML = ""
     function typeWriter() {
@@ -26,9 +25,9 @@ function slideshow() {
         t2[0].innerHTML = "";
         t4[0].classList.remove("animation");
     };
-    t1[0].innerHTML = ["welcome, enjoy the original","outstanding coffee"][myIndex];
+    t1[0].innerHTML = [document.getElementById("bannertext1").innerHTML,document.getElementById("bannertext2").innerHTML][myIndex];
     t1[0].classList.add("animation");
-    t2[0].innerHTML = ["fresh porto coffee","expresso bar"][myIndex];
+    t2[0].innerHTML = [document.getElementById("bannertitle1").innerHTML,document.getElementById("bannertitle2").innerHTML][myIndex];
     t2[0].classList.add("animation");
     t4[0].classList.add("animation");
     x[myIndex].classList.add("fading");
