@@ -1,6 +1,7 @@
  # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
 import os.path
+import json
 
 # Tạo class: Mở  File, Sau đó đọc với thư viện BeautifulSoup.
 # Ghi đè những nội dung thay đổi
@@ -49,7 +50,7 @@ class photo(create):
         self.soup.find_all(attrs={'class':'item-photo'})[item_n-1].findChildren()[1]['src'] = img_page
         self.to_html(str(self.soup.prettify()))
 
-
+# Tạo class menu: Thay đổi thực đơn, giá bán.
 class menu(create):
     def change_main(self,head='Our menu',detail ='Cap nhat nhung mon ăn ngon vch'):
         self.soup.find(id='our_menu').find('h2').string = head
@@ -67,6 +68,32 @@ class menu(create):
 # c.change_button("hello wỏld")
 # c = menu()
 # c.change_menu(5,'Ca phe', '$2', 'Hạt, đường, sữa')
+# Tạo class about
+# class about(create):
+#     def change_title(self, title, abc):
+#        self.soup.find(attrs={'class':'rotator-word'}).find('h2').string = title
+#        self.soup.find_all(attrs={'class':'_item1'}).string = abc
+#        self.to_html(str(self.soup.prettify()))
+
+# a = about()
+# Tạo class reservations
+class reservations(create):
+    def change_info(self,head,detail,phone_number):
+       self.soup.find(attrs={'class':'wraper1'}).find('h2').string = head
+       self.soup.find(attrs={'class':'wraper1'}).find('p').string = detail
+       self.soup.find(attrs={'class':'wraper1'}).find('a').string = phone_number
+       self.to_html(str(self.soup.prettify()))
+    def change_time(self,n_day,day,n_time,time):
+        self.soup.find(attrs={'class':'wraper2'}).find_all('h2')[n_day-1].string = day
+        self.soup.find(attrs={'class':'wraper2'}).find_all('p')[n_time-1].string = time
+        self.to_html(str(self.soup.prettify()))
+
+
+# r = reservations()
+# r.change_time(1,'MON - TUS',2,'9:00PM - 10:00 PM')
+# r.change_info('Phuc vu hang ngay', ' San sang ho tro ban moi ngay', '098766161s')
+# Test: 65 Cao Thắng lat: 10.771250 long: 106.680616
+
 # Tạo class New: thay đổi nội dung phần News, kế thừa lớp create
 class New(create):
     def change_main(self,head='New & photo',detail ='Cap nhat nhung tin tuc nong hoi'):
