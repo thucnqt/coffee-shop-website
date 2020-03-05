@@ -1,10 +1,16 @@
  # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
+import os.path
 class create():
     def __init__(self):
-        f = open('../index.html',encoding='utf8',mode='r')
-        self.soup = BeautifulSoup(f.read(),features='lxml')
-        f.close()
+        if os.path.isfile('../index_new.html'):
+            f = open('../index_new.html',encoding='utf8',mode='r')
+            self.soup = BeautifulSoup(f.read(),features='lxml')
+            f.close()
+        else:
+            f = open('../index.html',encoding='utf8',mode='r')
+            self.soup = BeautifulSoup(f.read(),features='lxml')
+            f.close()
     def to_html(self,change):
         f = open('../index_new.html',encoding='utf8',mode='w')
         f.write(change)
@@ -31,6 +37,20 @@ class photo(create):
         self.soup.find_all(attrs={'class':'item-photo'})[item_n-1].findChildren()[0]['href'] = img_after_click
         self.soup.find_all(attrs={'class':'item-photo'})[item_n-1].findChildren()[1]['src'] = img_page
         self.to_html(str(self.soup.prettify()))
+class New(create):
+    def change_main(self,head='New & photo',detail ='Cap nhat nhung tin tuc nong hoi'):
+        self.soup.find_all(attrs={'class':'first_news'})[0].string = head
+        self.soup.find_all(attrs={'class':'first_news'})[1].string = detail
+        self.to_html(str(self.soup.prettify()))
+    def change_content(self,column,head='',date='',detail='',autor=''):
+        self.soup.find_all(attrs={'class':'_head'})[column-1].string = head
+        self.soup.find_all(attrs={'class':'_date'})[column-1].string = date
+        self.soup.find_all(attrs={'class':'_detail'})[column-1].string = detail
+        self.soup.find_all(attrs={'class':'_autor'})[column-1].string = autor
+        self.to_html(str(self.soup.prettify()))
+    def change_button(self,button_name='view'):
+        self.soup.find_all(attrs={'class':'button_news'})[0].string = button_name
+        self.to_html(str(self.soup.prettify()))
 
 class footer(create):
     def change_image(self,url='img/logo-light.png'):
@@ -52,8 +72,8 @@ class footer(create):
         self.soup.find(id='copyright').string = copy_right
         self.to_html(str(self.soup.prettify()))
 
-# p = photo()
-# p.change_image(1,'img/coffee3.jpg','img/coffee3.jpg')
+p = photo()
+p.change_image(1,'img/coffee2.jpg','img/coffee2.jpg')
 # b = banner()
 # b.change_text(slide=1,line=2,text='fresh porto coffee')
 # # ví dụ
@@ -67,3 +87,9 @@ class footer(create):
 # b = header()
 # b.change_items(new_items)
 # b.change_logo('img/logo2.png')
+
+
+a = New()
+a.change_button('Xem them di')
+
+a.change_main('New home112321321','la mot ngoi nha moi')
