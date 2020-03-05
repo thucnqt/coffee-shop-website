@@ -48,5 +48,7 @@ Các phần còn thiếu các component: News, Location,Reservations, About.
 Dự kiến hoàn tất: 3:00 pm 05/03/2020. 
 Công việc sẽ làm: Hoàn tất các phần thiếu + Sau đó tổng hợp và tối ưu source code hoàn chỉnh.
 
+Thứ 5: 05/03/2020
+3.pm Tiến độ: 70 - 80 %. Còn thiếu about, reservation, map. Tiếu tục hoàn tất hết ngày hôm nay.
 ---****---
 Deadline hoàn tất phần 2: 3.pm Thứ 6 ngày 06/03/2020.
