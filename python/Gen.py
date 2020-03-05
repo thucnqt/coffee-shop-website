@@ -49,8 +49,25 @@ class photo(create):
         self.soup.find_all(attrs={'class':'item-photo'})[item_n-1].findChildren()[1]['src'] = img_page
         self.to_html(str(self.soup.prettify()))
 
-# Tạo class New: thay đổi nội dung phần News, kế thừa lớp create
 
+class menu(create):
+    def change_main(self,head='Our menu',detail ='Cap nhat nhung mon ăn ngon vch'):
+        self.soup.find(id='our_menu').find('h2').string = head
+        self.soup.find(id='our_menu').find('p').string = detail
+        self.to_html(str(self.soup.prettify()))
+    def change_menu(self,item_n, item, price, detail):
+        self.soup.find_all(attrs={'class':'info_item'})[item_n-1].find_all("h3")[0] = item
+        self.soup.find_all(attrs={'class':'info_item'})[item_n-1].find_all("p")[0] = price
+        self.soup.find_all(attrs={'class':'detail'})[item_n-1].string = detail
+        self.to_html(str(self.soup.prettify()))
+    def change_button(self,button_name='view'):
+        self.soup.find_all(attrs={'class':'button_menu'})[0].string = button_name
+        self.to_html(str(self.soup.prettify()))
+# c = menu()
+# c.change_button("hello wỏld")
+# c = menu()
+# c.change_menu(5,'Ca phe', '$2', 'Hạt, đường, sữa')
+# Tạo class New: thay đổi nội dung phần News, kế thừa lớp create
 class New(create):
     def change_main(self,head='New & photo',detail ='Cap nhat nhung tin tuc nong hoi'):
         self.soup.find_all(attrs={'class':'first_news'})[0].string = head
