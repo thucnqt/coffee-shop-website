@@ -100,18 +100,18 @@
                                     <script>
                                         ityped.init(document.querySelector("#ityped"), {
                                           showCursor: false,
-                                          strings: ['Coffee', 'Tea', 'Desert']
+                                          strings: ['__coffee','__tea','__desert']
                                         })
                                     </script>
                                 <h2 id="border_about"></h2>
-                                <p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc.</p>
-                                <p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <p class= "p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc.</p>
+                                <p class= "p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                                 <a href="#" id="btn_about"class="button btn-style" style="transform: translateX(-50%);"><p>view more</p></a>
                             </div>
 
                         </div>
                         <div class="col-md-6">
-                            <img id="about_img" src = "img/coffee-others-1.jpg">
+                            <img id= "about_img" src = "img/coffee-others-1.jpg">
                         </div>
                     </div>
                 </div>
@@ -399,11 +399,11 @@
             <div id="map" class="section">
             </div>
             <script>
-                //Viet nam locations !
+
                 var map = new GMaps({
                   el: '#map',
-                  lat: 10.762622,
-                  lng: 106.660172,
+                  lat: __lat,
+                  lng: __long,
                 });
             </script>
         <div id="footer">
