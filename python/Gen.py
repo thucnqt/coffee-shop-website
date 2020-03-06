@@ -22,7 +22,31 @@ class create():
         f = open('../index_new.html',encoding='utf8',mode='w')
         f.write(change)
         f.close()
+class about_animation():
+     def change_text(self, __coffee,__tea ,__desert):
+        self.fin = open("../index.html","rt")
+        self.fout = open("../index_new.html", "wt")
+        for line in self.fin:
+            self.fout.write(line.replace('__coffee', __coffee).replace('__tea', __tea).replace('__desert',__desert))
+        self.fin.close()
+        self.fout.close()
+# ll = about_animation()
+# ll.change_text('ca phe','nuoc ngot', 'sinh to')
+class About(create):
+    def change_text(self,head,contain,detail,button_name):
+        # self.__str  = '<span id="ityped"></span>'
+        self.soup.find(id='app').find('h2').string = head
+        self.soup.find_all(attrs={'class':'p1'})[0].string = contain
+        self.soup.find_all(attrs={'class':'p2'})[0].string = detail
+        self.soup.find(id='btn_about').find('p').string = button_name
+        self.to_html(str(self.soup.prettify()))
+    def change_image(self,url='img/coffee1.jpg'):
+        self.soup.find(id='about_img')['src'] = url
+        self.to_html(str(self.soup.prettify()))
 
+# a = About()
+# a. change_image('img/coffee1.jpg')
+# a.change_text('hoc hanh','hoc lam gi','hoc hanh de gioi hon','xem them')
 # Tạo class banner: thay đội nội dung phần slide, kế thừa lớp create
 class banner(create):
     def change_text(self,slide,line,text):
@@ -109,7 +133,17 @@ class New(create):
     def change_button(self,button_name='view'):
         self.soup.find_all(attrs={'class':'button_news'})[0].string = button_name
         self.to_html(str(self.soup.prettify()))
+class map():
+    def change_map(self, lat, long):
+        self.fin = open("../index.html","rt")
+        self.fout = open("../index_new.html", "wt")
+        for line in self.fin:
+            self.fout.write(line.replace('__lat', lat).replace('__long', long))
+        self.fin.close()
+        self.fout.close()
 
+# a = map()
+# a.change_map('30.0','40.0')
 # Tạo class footer: thay đổi nội dung phần footer, kế thừa lớp create
 class footer(create):
     def change_image(self,url='img/logo-light.png'):
