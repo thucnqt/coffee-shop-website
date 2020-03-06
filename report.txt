@@ -50,5 +50,8 @@ Công việc sẽ làm: Hoàn tất các phần thiếu + Sau đó tổng hợp 
 
 Thứ 5: 05/03/2020
 3.pm Tiến độ: 70 - 80 %. Còn thiếu about, reservation, map. Tiếu tục hoàn tất hết ngày hôm nay.
+Thứ 6: 06/03/2020
+Hoàn tất các component.
+Đang trong quá trình chạy và kiểm tra bug và tối ưu lại code. Tiến độ 0 %
 ---****---
 Deadline hoàn tất phần 2: 3.pm Thứ 6 ngày 06/03/2020.
