@@ -19,6 +19,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="http://maps.google.com/maps/api/js"></script>
     <script src="js/gmaps.js"></script>
+    <script src="js/rotator.js"></script>
     <!-- photo lib -->
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css'>
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css'>
@@ -91,18 +92,17 @@
                     <div id="row_about" class="row">
                         <div class="col-md-6">
                             <div class="content_about">
-                                <div class="rotator-word">
-                                    <h2>Enjoy the best taste of our &nbsp;
-                                        <span class="rotator-words">
-                                            <span>tea</span>
-                                            <span>coffee</span>
-                                            <span>desert</span>
-                                            <span>breakfast</span>
-                                            <span>dinner</span>
-                                            <span>chill out</span>
-                                        </span>
+                                <div id="app">
+                                    <h2>Enjoy the best taste of our
+                                        <span id="ityped"></span>
                                     </h2>
                                 </div>
+                                    <script>
+                                        ityped.init(document.querySelector("#ityped"), {
+                                          showCursor: false,
+                                          strings: ['Coffee', 'Tea', 'Desert']
+                                        })
+                                    </script>
                                 <h2 id="border_about"></h2>
                                 <p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc.</p>
                                 <p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc. Vivamus bibendum magna ex lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
