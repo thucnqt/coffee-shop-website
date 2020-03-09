@@ -55,3 +55,9 @@ Hoàn tất các component.
 Đang trong quá trình chạy và kiểm tra bug và tối ưu lại code. Tiến độ 0 %
 ---****---
 Deadline hoàn tất phần 2: 3.pm Thứ 6 ngày 06/03/2020.
+Thứ 2: 09/03/2020: 
+Các class ứng với mỗi component chạy ok. 
+Đánh giá: 
+- Về phần tạo template: Về phần CSS + HTML thực hiện khá tốt, Một số animation + JS đạt được ở mức độ 80 % so với website ban đầu.
+Các vấn đề khi làm: Gộp các component sẽ bị ghi đè CSS, JS tương đối phức tạp, hoàn tất được 80-90 %. 
+- Về phần viết Class: Thay đổi nội dung bằng việc xử lí file HTML đạt 80 - 100 %.  
